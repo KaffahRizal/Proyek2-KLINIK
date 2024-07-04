@@ -31,10 +31,9 @@
         <div class="sidebar-wrapper scrollbar scrollbar-inner">
           <div class="sidebar-content">
             <ul class="nav nav-secondary">
-              <li class="nav-item  @if($currentRoute != '/admin/dashboard') active @endif">
+              <li class="nav-item  @if($currentRoute == 'admin/dashboard') active @endif">
                 <a
                   href="/admin/dashboard"
-                  class="collapsed"
                   aria-expanded="false">
                   <i class="fas fa-home"></i>
                   <p>Dashboard</p>
@@ -44,15 +43,52 @@
                 <span class="sidebar-mini-icon">
                   <i class="fa fa-ellipsis-h"></i>
                 </span>
-                <h4 class="text-section">Components</h4>
+                <h4 class="text-section">Faskes </h4>
               </li>
-              <li class="nav-item  @if($currentRoute != '/admin/faskes') active @endif">
+              <li class="nav-item  @if($currentRoute == 'admin/faskes') active @endif">
                 <a
                   href="/admin/faskes"
-                  class="collapsed"
                   aria-expanded="false">
                   <i class="fas fa-home"></i>
                   <p>Fasilitas Kesehatan</p>
+                </a>
+              </li>
+              <li class="nav-item  @if($currentRoute == 'admin/jenis') active @endif">
+                <a
+                  href="/admin/jenis"
+                  aria-expanded="false">
+                  <i class="fas fa-home"></i>
+                  <p>Jenis faskes</p>
+                </a>
+              </li>
+              <li class="nav-item  @if($currentRoute == 'admin/kategori') active @endif">
+                <a
+                  href="/admin/kategori"
+                  aria-expanded="false">
+                  <i class="fas fa-home"></i>
+                  <p>Kategori faskes</p>
+                </a>
+              </li>
+              <li class="nav-section">
+                <span class="sidebar-mini-icon">
+                  <i class="fa fa-ellipsis-h"></i>
+                </span>
+                <h4 class="text-section">Lokasi</h4>
+              </li>
+              <li class="nav-item  @if($currentRoute == 'admin/provinsi') active @endif">
+                <a
+                  href="/admin/provinsi"
+                  aria-expanded="false">
+                  <i class="fas fa-globe"></i>
+                  <p>Provinsi</p>
+                </a>
+              </li>
+              <li class="nav-item  @if($currentRoute == 'admin/kabkota') active @endif">
+                <a
+                  href="/admin/kabkota"
+                  aria-expanded="false">
+                  <i class="fas fa-home"></i>
+                  <p>Kabupaten Kota</p>
                 </a>
               </li>
             </ul>
