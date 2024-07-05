@@ -3,6 +3,7 @@
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\ProvinsiController;
+use App\Http\Controllers\FaskesController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -30,3 +31,9 @@ Route::get('admin/provinsi/edit/{id}', [ProvinsiController::class, 'edit'])->nam
 Route::put('admin/provinsi/update/{id}', [ProvinsiController::class, 'update'])->name('provinsi.update');
 Route::delete('admin/provinsi/delete/{id}', [ProvinsiController::class, 'destroy'])->name('provinsi.destroy');
 
+Route::get('/admin/faskes', [FaskesController::class, 'show'])->name('faskes')->name('faskes');
+Route::get('admin/faskes/create', [FaskesController::class, 'create'])->name('faskes.create');
+Route::post('/admin/faskes/create', [FaskesController::class, 'store'])->name('faskes.store');
+Route::get('admin/faskes/edit/{id}', [FaskesController::class, 'edit'])->name('faskes.edit');
+Route::put('admin/faskes/update/{id}', [FaskesController::class, 'update'])->name('faskes.update');
+Route::delete('admin/faskes/delete/{id}', [FaskesController::class, 'destroy'])->name('faskes.destroy');
