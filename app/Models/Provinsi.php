@@ -11,4 +11,8 @@ class Provinsi extends Model
     protected $table = 'provinsi';
 
     protected $fillable = ['nama', 'ibukota', 'latitude', 'longtitude'];
+
+    public function kabkota(){
+        return $this->hasMany(KabKota::class);
+    }
 }

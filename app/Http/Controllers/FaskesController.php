@@ -74,7 +74,7 @@ class FaskesController extends Controller
         //kirim ke view
         return view('admin.contents.faskes.edit', [
             'faskes' => $faskes,
-            'kabkota' => $kabkota
+            'kabkota' => $kabkotas
         ]);
     }
 

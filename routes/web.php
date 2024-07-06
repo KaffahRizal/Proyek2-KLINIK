@@ -1,9 +1,12 @@
 <?php
 
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\KabKotaController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\ProvinsiController;
 use App\Http\Controllers\FaskesController;
+use App\Http\Controllers\JenisFaskesController;
+use App\Http\Controllers\KategoriController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -22,8 +25,10 @@ Route::middleware('auth')->group(function () {
 
 require __DIR__.'/auth.php';
 
+// Route Dashboard
 Route::get('/admin/dashboard', [DashboardController::class, 'index'])->name('dashboard');
 
+// Route Provinsi
 Route::get('/admin/provinsi', [ProvinsiController::class, 'show'])->name('provinsi');
 Route::get('admin/provinsi/create', [ProvinsiController::class, 'create'])->name('provinsi.create');
 Route::post('/admin/provinsi/create', [ProvinsiController::class, 'store'])->name('provinsi.store');
@@ -31,7 +36,28 @@ Route::get('admin/provinsi/edit/{id}', [ProvinsiController::class, 'edit'])->nam
 Route::put('admin/provinsi/update/{id}', [ProvinsiController::class, 'update'])->name('provinsi.update');
 Route::delete('admin/provinsi/delete/{id}', [ProvinsiController::class, 'destroy'])->name('provinsi.destroy');
 
-Route::get('/admin/faskes', [FaskesController::class, 'show'])->name('faskes')->name('faskes');
+// Route KabKota
+Route::get('/admin/kabkota', [KabKotaController::class, 'show'])->name('kabkota');
+Route::get('admin/kabkota/create', [KabKotaController::class, 'create'])->name('kabkota.create');
+Route::post('/admin/kabkota/create', [KabKotaController::class, 'store'])->name('kabkota.store');
+Route::get('admin/kabkota/edit/{id}', [KabKotaController::class, 'edit'])->name('kabkota.edit');
+Route::put('admin/kabkota/update/{id}', [KabKotaController::class, 'update'])->name('kabkota.update');
+Route::delete('admin/kabkota/delete/{id}', [KabKotaController::class, 'destroy'])->name('kabkota.destroy');
+
+// Route jensi faskes
+Route::get('/admin/jenis', [JenisFaskesController::class, 'show'])->name('jenis');
+Route::get('admin/jenis/create', [JenisFaskesController::class, 'create'])->name('jenis.create');
+Route::post('/admin/jenis/create', [JenisFaskesController::class, 'store'])->name('jenis.store');;
+Route::delete('admin/jenis/delete/{id}', [JenisFaskesController::class, 'destroy'])->name('jenis.destroy');
+
+// Route Kategori faskes
+Route::get('/admin/kategori', [KategoriController::class, 'show'])->name('kategori');
+Route::get('admin/kategori/create', [KategoriController::class, 'create'])->name('kategori.create');
+Route::post('/admin/kategori/create', [KategoriController::class, 'store'])->name('kategori.store');;
+Route::delete('admin/kategori/delete/{id}', [KategoriController::class, 'destroy'])->name('kategori.destroy');
+
+// Route faskes
+Route::get('/admin/faskes', [FaskesController::class, 'show'])->name('faskes');
 Route::get('admin/faskes/create', [FaskesController::class, 'create'])->name('faskes.create');
 Route::post('/admin/faskes/create', [FaskesController::class, 'store'])->name('faskes.store');
 Route::get('admin/faskes/edit/{id}', [FaskesController::class, 'edit'])->name('faskes.edit');

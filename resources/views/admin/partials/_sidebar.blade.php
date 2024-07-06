@@ -5,14 +5,15 @@
       <div class="sidebar" data-background-color="dark">
         <div class="sidebar-logo">
           <!-- Logo Header -->
-          <div class="logo-header" data-background-color="dark">
-            <a href="index.html" class="logo">
+          <div class="logo-header" data-background-color="green2">
+            <a href="/" class="logo">
               <img
-                src="{{asset('kaiadmin')}}/assets/img/kaiadmin/logo_light.svg"
+                src="{{asset('kaiadmin')}}/assets/img/kaiadmin/logofsks.png"
                 alt="navbar brand"
-                class="navbar-brand"
-                height="20"
+                class="navbar-brand bg-white rounded-pill"
+                height="40"
               />
+              <p class="h2 ms-3 mt-2 text-white">Faskes</p>
             </a>
             <div class="nav-toggle">
               <button class="btn btn-toggle toggle-sidebar">
@@ -49,7 +50,7 @@
                 <a
                   href="/admin/faskes"
                   aria-expanded="false">
-                  <i class="fas fa-home"></i>
+                  <i class="fas fa-hospital"></i>
                   <p>Fasilitas Kesehatan</p>
                 </a>
               </li>
@@ -57,7 +58,7 @@
                 <a
                   href="/admin/jenis"
                   aria-expanded="false">
-                  <i class="fas fa-home"></i>
+                  <i class="fas fa-star-of-life"></i>
                   <p>Jenis faskes</p>
                 </a>
               </li>
@@ -65,7 +66,7 @@
                 <a
                   href="/admin/kategori"
                   aria-expanded="false">
-                  <i class="fas fa-home"></i>
+                  <i class="fas fa-book"></i>
                   <p>Kategori faskes</p>
                 </a>
               </li>
@@ -87,7 +88,7 @@
                 <a
                   href="/admin/kabkota"
                   aria-expanded="false">
-                  <i class="fas fa-home"></i>
+                  <i class="fas fa-map"></i>
                   <p>Kabupaten Kota</p>
                 </a>
               </li>
