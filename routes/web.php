@@ -6,6 +6,7 @@ use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\ProvinsiController;
 use App\Http\Controllers\FaskesController;
 use App\Http\Controllers\JenisFaskesController;
+use App\Http\Controllers\KategoriController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -48,6 +49,12 @@ Route::get('/admin/jenis', [JenisFaskesController::class, 'show'])->name('jenis'
 Route::get('admin/jenis/create', [JenisFaskesController::class, 'create'])->name('jenis.create');
 Route::post('/admin/jenis/create', [JenisFaskesController::class, 'store'])->name('jenis.store');;
 Route::delete('admin/jenis/delete/{id}', [JenisFaskesController::class, 'destroy'])->name('jenis.destroy');
+
+// Route Kategori faskes
+Route::get('/admin/kategori', [KategoriController::class, 'show'])->name('kategori');
+Route::get('admin/kategori/create', [KategoriController::class, 'create'])->name('kategori.create');
+Route::post('/admin/kategori/create', [KategoriController::class, 'store'])->name('kategori.store');;
+Route::delete('admin/kategori/delete/{id}', [KategoriController::class, 'destroy'])->name('kategori.destroy');
 
 // Route faskes
 Route::get('/admin/faskes', [FaskesController::class, 'show'])->name('faskes');

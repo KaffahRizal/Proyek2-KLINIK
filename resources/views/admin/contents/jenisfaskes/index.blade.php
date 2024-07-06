@@ -3,7 +3,7 @@
 @section('content')
 <div class="d-flex align-items-left align-items-md-center flex-column flex-md-row pt-2 pb-4">
     <div>
-        <h3 class="fw-bold m-0">Jenis Faskes</h3>
+        <h3 class="fw-bold m-0">Jenis Fasilitas Kesehatan</h3>
         <nav>
             <ol class="breadcrumb">
               <li class="breadcrumb-item"><a href="/admin/dashboard"><i class="fas fa-home"></i></a></li>
@@ -21,7 +21,7 @@
                 <a href="{{ route('jenis.create') }}" class="btn btn-primary my-3 btn-rounded">+ Jenis Faskes</a>
             </div>
             <div class="table-responsive">
-                <table class="table display table-striped table-hover table-bordered table-head-bg-success table-bordered-bd-success" id="add-row">
+                <table class="table display table-striped table-hover table-bordered table-head-bg-danger table-bordered-bd-danger" id="add-row">
                     <thead>
                         <tr class="text-center">
                             <th>No.</th>
