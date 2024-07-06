@@ -4,6 +4,7 @@ use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\KabKotaController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\ProvinsiController;
+use App\Http\Controllers\FaskesController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -40,3 +41,11 @@ Route::post('/admin/kabkota/create', [KabKotaController::class, 'store'])->name(
 Route::get('admin/kabkota/edit/{id}', [KabKotaController::class, 'edit'])->name('kabkota.edit');
 Route::put('admin/kabkota/update/{id}', [KabKotaController::class, 'update'])->name('kabkota.update');
 Route::delete('admin/kabkota/delete/{id}', [KabKotaController::class, 'destroy'])->name('kabkota.destroy');
+
+// Route faskes
+Route::get('/admin/faskes', [FaskesController::class, 'show'])->name('faskes')->name('faskes');
+Route::get('admin/faskes/create', [FaskesController::class, 'create'])->name('faskes.create');
+Route::post('/admin/faskes/create', [FaskesController::class, 'store'])->name('faskes.store');
+Route::get('admin/faskes/edit/{id}', [FaskesController::class, 'edit'])->name('faskes.edit');
+Route::put('admin/faskes/update/{id}', [FaskesController::class, 'update'])->name('faskes.update');
+Route::delete('admin/faskes/delete/{id}', [FaskesController::class, 'destroy'])->name('faskes.destroy');
