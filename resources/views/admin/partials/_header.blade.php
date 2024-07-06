@@ -4,7 +4,7 @@
       <div class="logo-header" data-background-color="dark">
         <a href="index.html" class="logo">
           <img
-            src="{{asset('kaiadmin')}}/assets/img/kaiadmin/logo_light.svg"
+            src="{{asset('kaiadmin')}}/assets/img/kaiadmin/logofsks.png"
             alt="navbar brand"
             class="navbar-brand"
             height="20"
