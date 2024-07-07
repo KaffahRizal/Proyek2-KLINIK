@@ -51,8 +51,10 @@
                             <td>{{ $fas->email }}</td>
                             <td>{{ $fas->kabkota_id }}</td>
                             <td>{{ $fas->rating }}</td>
-                            <td>{{ $prov->latitude }}</td>
-                            <td>{{ $prov->longtitude }}</td>
+                            <td>{{ $fas->latitude }}</td>
+                            <td>{{ $fas->longtitude }}</td>
+                            <td>{{ $fas->jenis_faskes_id }}</td>
+                            <td>{{ $fas->kategori_id }}</td>
                             <td class="d-flex">
                                 <a href="{{ route('faskes.edit', $fas->id) }}" class="btn btn-warning btn-sm me-3">Edit</a>
                                 <form action="{{ route('faskes.destroy', $fas->id) }}" method="POST">

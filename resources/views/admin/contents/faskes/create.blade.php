@@ -64,7 +64,7 @@
                 <div class="form-group row d-flex justify-content-center">
                     <label for="rating" class="col-form-label col-8">Rating</label> 
                     <div class="col-8">
-                        <input id="rating" name="rating" type="int" class="form-control border border-secondary border-2">
+                        <input id="rating" name="rating" type="number" class="form-control border border-secondary border-2">
                     </div>
                 </div>
                 <div class="form-group row d-flex justify-content-center">

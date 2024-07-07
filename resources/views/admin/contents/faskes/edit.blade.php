@@ -56,7 +56,7 @@
                 <div class="form-group row d-flex justify-content-center">
                     <label for="email" class="col-form-label col-8">Email</label> 
                     <div class="col-8">
-                        <input id="email" name="email" type="text" 
+                        <input id="email" name="email" type="email" 
                         class="form-control border border-secondary border-2
                         value="{{ $faskes->email ?? '' }}">
                     </div>
@@ -73,7 +73,7 @@
                 <div class="form-group row d-flex justify-content-center">
                     <label for="rating" class="col-form-label col-8">Rating</label> 
                     <div class="col-8">
-                        <input id="rating" name="rating" type="int" 
+                        <input id="rating" name="rating" type="number" 
                         class="form-control border border-secondary border-2
                         value="{{ $faskes->rating ?? '' }}">
                     </div>
@@ -81,7 +81,7 @@
                 <div class="form-group row d-flex justify-content-center">
                     <label for="latitude" class="col-form-label col-8">Latitude</label> 
                     <div class="col-8">
-                    <input id="latitude" name="latitude" type="double" 
+                    <input id="latitude" name="latitude" type="text" 
                     class="form-control border border-secondary border-2
                     value="{{ $faskes->latitude ?? '' }}">
                     </div>
@@ -89,7 +89,7 @@
                 <div class="form-group row d-flex justify-content-center">
                     <label for="longtitude" class="col-form-label col-8">Longtitude</label> 
                     <div class="col-8">
-                    <input id="longtitude" name="longtitude" type="double" 
+                    <input id="longtitude" name="longtitude" type="text" 
                     class="form-control border border-secondary border-2
                     value="{{ $faskes->longtitude ?? '' }}">
                     </div>
