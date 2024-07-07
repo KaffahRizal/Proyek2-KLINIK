@@ -44,7 +44,7 @@ Route::get('admin/kabkota/edit/{id}', [KabKotaController::class, 'edit'])->name(
 Route::put('admin/kabkota/update/{id}', [KabKotaController::class, 'update'])->name('kabkota.update');
 Route::delete('admin/kabkota/delete/{id}', [KabKotaController::class, 'destroy'])->name('kabkota.destroy');
 
-// Route jensi faskes
+// Route jenis faskes
 Route::get('/admin/jenis', [JenisFaskesController::class, 'show'])->name('jenis');
 Route::get('admin/jenis/create', [JenisFaskesController::class, 'create'])->name('jenis.create');
 Route::post('/admin/jenis/create', [JenisFaskesController::class, 'store'])->name('jenis.store');;
@@ -53,7 +53,7 @@ Route::delete('admin/jenis/delete/{id}', [JenisFaskesController::class, 'destroy
 // Route Kategori faskes
 Route::get('/admin/kategori', [KategoriController::class, 'show'])->name('kategori');
 Route::get('admin/kategori/create', [KategoriController::class, 'create'])->name('kategori.create');
-Route::post('/admin/kategori/create', [KategoriController::class, 'store'])->name('kategori.store');;
+Route::post('/admin/kategori/create', [KategoriController::class, 'store'])->name('kategori.store');
 Route::delete('admin/kategori/delete/{id}', [KategoriController::class, 'destroy'])->name('kategori.destroy');
 
 // Route faskes

@@ -21,7 +21,7 @@
             <form action="{{ route('faskes.store') }}" method="POST" class="py-3">
                 @csrf
                 <div class="form-group row d-flex justify-content-center">
-                    <label for="faskes" class="col-form-label col-8">Nama faskes</label> 
+                    <label for="nama" class="col-form-label col-8">Nama faskes</label> 
                     <div class="col-8">
                         <input id="nama" name="nama" type="text" class="form-control border border-secondary border-2">
                     </div>
@@ -47,17 +47,19 @@
                 <div class="form-group row d-flex justify-content-center">
                     <label for="email" class="col-form-label col-8">Email</label> 
                     <div class="col-8">
-                        <input id="email" name="email" type="text" class="form-control border border-secondary border-2">
+                        <input id="email" name="email" type="email" class="form-control border border-secondary border-2">
                     </div>
                 </div>
-                <div class="mb-2">
-                    <label for="kabkota_id" class="form-label">Kabupaten/Kota</label>
-                    <select name="kabkota_id" id="kabkota_id" class="form-select">
-                          <option value="">Pilih Kabupaten/Kota</option>
-                          @foreach ($kabkotas as $kabkota)
-                              <option value="{{ $kabkota->id }}">{{ $kabkota->name }}</option>
-                          @endforeach
-                    </select>
+                <div class="form-group row d-flex justify-content-center">
+                    <label for="kabkota_id" class="form-label col-8">Kabupaten/Kota</label>
+                    <div class="col-8">
+                        <select name="kabkota_id" id="kabkota_id" class="form-select border border-secondary border-2">
+                            <option value="">Pilih Kabupaten/Kota</option>
+                            @foreach ($kabkota as $kabkota)
+                              <option value="{{ $kabkota->id }}">{{ $kabkota->nama }}</option>
+                            @endforeach
+                        </select>
+                    </div>
                 </div>
                 <div class="form-group row d-flex justify-content-center">
                     <label for="rating" class="col-form-label col-8">Rating</label> 
@@ -68,32 +70,36 @@
                 <div class="form-group row d-flex justify-content-center">
                     <label for="latitude" class="col-form-label col-8">Latitude</label> 
                     <div class="col-8">
-                    <input id="latitude" name="latitude" type="double" class="form-control border border-secondary border-2">
+                    <input id="latitude" name="latitude" type="text" class="form-control border border-secondary border-2">
                     </div>
                 </div>
                 <div class="form-group row d-flex justify-content-center">
                     <label for="longtitude" class="col-form-label col-8">Longtitude</label> 
                     <div class="col-8">
-                    <input id="longtitude" name="longtitude" type="double" class="form-control border border-secondary border-2">
+                    <input id="longtitude" name="longtitude" type="text" class="form-control border border-secondary border-2">
                     </div>
                 </div>
-                <div class="mb-2">
-                    <label for="jenis_faskes_id" class="form-label">Jenis Faskes</label>
-                    <select name="jenis_faskes_id" id="jenis_faskes_id" class="form-select">
-                          <option value="">Pilih Jenis Faskes</option>
-                          @foreach ($jenis_faskes as $jenis_faskes)
-                              <option value="{{ $jenis_faskes->id }}">{{ $jenis_faskes->name }}</option>
-                          @endforeach
-                    </select>
+                <div class="form-group row d-flex justify-content-center">
+                    <label for="jenis_faskes_id" class="col-form-label col-8">Jenis Faskes</label> 
+                    <div class="col-8">
+                        <select name="jenis_faskes_id" id="jenis_faskes_id" class="form-select border border-secondary border-2">
+                            <option value="">Pilih Jenis Faskes</option>
+                            @foreach ($jenis_faskes as $jenis_faskes)
+                                <option value="{{ $jenis_faskes->id }}">{{ $jenis_faskes->nama }}</option>
+                            @endforeach
+                        </select>
+                    </div>
                 </div>
-                <div class="mb-2">
-                    <label for="kategori_id" class="form-label">Kategori</label>
-                    <select name="kategori_id" id="kategori_id" class="form-select">
-                          <option value="">Pilih Kategori</option>
-                          @foreach ($kategori as $kategori)
-                              <option value="{{ $kategori->id }}">{{ $kategori->name }}</option>
-                          @endforeach
-                    </select>
+                <div class="form-group row d-flex justify-content-center">
+                    <label for="kategori_id" class="col-form-label col-8">Kategori</label>
+                    <div class="col-8">
+                        <select name="kategori_id" id="kategori_id" class="form-select border border-secondary border-2">
+                            <option value="">Pilih Kategori</option>
+                            @foreach ($kategoris as $kategori)
+                              <option value="{{ $kategori->id }}">{{ $kategori->nama }}</option>
+                            @endforeach
+                        </select>
+                    </div>
                 </div> 
                 <div class="form-group row d-flex justify-content-center">
                     <div class="col-8 d-flex justify-content-center">
