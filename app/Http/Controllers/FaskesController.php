@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+
 use App\Models\Kategori;
 use App\Models\JenisFaskes;
 use App\Models\KabKota;
@@ -41,8 +42,8 @@ class FaskesController extends Controller
 
     //menyimpan data faskes
     public function store(Request $request)
-    {
-        // dd($request->all());
+    {   
+        
         $request->validate([
             'nama' => 'required',
             'nama_pengelola' => 'required',
@@ -56,6 +57,8 @@ class FaskesController extends Controller
             'jenis_faskes_id' => 'required|numeric',
             'kategori_id' => 'required|numeric',
         ]);
+
+        
 
         // simpan data
         faskes::create([
