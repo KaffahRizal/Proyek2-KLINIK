@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\kabkota;
-use App\Models\faskes;
+use App\Models\Kategori;
+use App\Models\JenisFaskes;
+use App\Models\KabKota;
+use App\Models\Faskes;
 use Illuminate\Http\Request;
 
 class FaskesController extends Controller
@@ -11,7 +13,7 @@ class FaskesController extends Controller
     //menampilkan semua data faskes
     public function show()
     {
-        // ambil semua data dri tabel students
+        // ambil semua data dri tabel faskes
         $faskes = Faskes::all();
 
         // kirim ke view
@@ -23,24 +25,36 @@ class FaskesController extends Controller
     //menampilkan form create faskes
     public function create()
     {
-        return view('admin.contents.faskes.create');
+        // ambil data kabkota berdasarkan id
+        $kabkota = kabkota::all();
+        // ambil data jenis faskes
+        $jenis_faskes = JenisFaskes::all();
+        // ambil data kategori
+        $kategoris = kategori::all();
+
+        return view('admin.contents.faskes.create' , [
+            'kabkota' => $kabkota,
+            'jenis_faskes' => $jenis_faskes,
+            'kategoris' => $kategoris
+        ]);
     }
 
     //menyimpan data faskes
     public function store(Request $request)
     {
+        // dd($request->all());
         $request->validate([
             'nama' => 'required',
             'nama_pengelola' => 'required',
             'alamat' => 'required',
             'website' => 'required',
             'email' => 'required',
-            'kabkota_id' => 'integer|nullable',
+            'kabkota_id' => 'required|numeric',
             'rating' => 'required',
             'latitude' => 'required',
             'longitude' => 'required',
-            'jenis_faskes_id' => 'integer|nullable',
-            'kategori_id' => 'integer|nullable',
+            'jenis_faskes_id' => 'required|numeric',
+            'kategori_id' => 'required|numeric',
         ]);
 
         // simpan data
@@ -66,15 +80,21 @@ class FaskesController extends Controller
     public function edit($id)
     {
         // ambil data berdasarkan id
-        $kabkotas = kabkota::all();
+        $kabkota = kabkota::all();
+        //ambil data jenis faskes
+        $jenis_faskes = JenisFaskes::all();
+        //ambil data kategori
+        $kategoris = kategori::all();
 
         //cari data faskes berdasarkan id
-        $faskes = faskes::find($id);
+        $faskes = faskes::find($id);      
 
         //kirim ke view
         return view('admin.contents.faskes.edit', [
             'faskes' => $faskes,
-            'kabkota' => $kabkotas
+            'kabkota' => $kabkota, 
+            'jenis_faskes' => $jenis_faskes,
+            'kategoris' => $kategoris
         ]);
     }
 
@@ -91,12 +111,12 @@ class FaskesController extends Controller
             'alamat' => 'required',
             'website' => 'required',
             'email' => 'required',
-            'kabkota_id' => 'integer|nullable',
+            'kabkota_id' => 'numeric|nullable',
             'rating' => 'required',
             'latitude' => 'required',
             'longitude' => 'required',
-            'jenis_faskes_id' => 'integer|nullable',
-            'kategori_id' => 'integer|nullable',
+            'jenis_faskes_id' => 'numeric|nullable',
+            'kategori_id' => 'numeric|nullable',
         ]);
 
         //update data

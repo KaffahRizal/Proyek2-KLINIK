@@ -20,12 +20,12 @@ return new class extends Migration
             $table->string('alamat , 100');        //4
             $table->string('website , 45');        //5
             $table->string('email , 45');          //6
-            $table->integer('kabkota_id');         //7
+            $table->foreignId('kabkota_id');         //7
             $table->integer('rating');             //8
-            $table->double('latitude');            //9
-            $table->double('longitude');           //10
-            $table->integer('jenis_faskes_id');    //11
-            $table->integer('kategori_id');        //12
+            $table->string('latitude');            //9
+            $table->string('longitude');           //10
+            $table->foreignId('jenis_faskes_id');    //11
+            $table->foreignId('kategori_id');        //12
             $table->timestamps();                  //13
         });
     }
