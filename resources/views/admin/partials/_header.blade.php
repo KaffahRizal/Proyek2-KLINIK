@@ -252,68 +252,60 @@
             </a>
             <div class="dropdown-menu quick-actions animated fadeIn">
               <div class="quick-actions-header">
-                <span class="title mb-1">Quick Actions</span>
+                <span class="title mb-1">Quick Link</span>
                 <span class="subtitle op-7">Shortcuts</span>
               </div>
               <div class="quick-actions-scroll scrollbar-outer">
                 <div class="quick-actions-items">
                   <div class="row m-0">
-                    <a class="col-6 col-md-4 p-0" href="#">
+                    <a class="col-6 col-md-4 p-0" href="/admin/faskes">
                       <div class="quick-actions-item">
                         <div class="avatar-item bg-danger rounded-circle">
-                          <i class="far fa-calendar-alt"></i>
+                          <i class="far fa-hospital"></i>
                         </div>
-                        <span class="text">Calendar</span>
+                        <span class="text">Faskes</span>
                       </div>
                     </a>
-                    <a class="col-6 col-md-4 p-0" href="#">
+                    <a class="col-6 col-md-4 p-0" href="/admin/jenis">
                       <div class="quick-actions-item">
                         <div
                           class="avatar-item bg-warning rounded-circle"
                         >
-                          <i class="fas fa-map"></i>
+                          <i class="fas fa-star-of-life"></i>
                         </div>
-                        <span class="text">Maps</span>
+                        <span class="text">Jenis Faskes</span>
                       </div>
                     </a>
-                    <a class="col-6 col-md-4 p-0" href="#">
+                    <a class="col-6 col-md-4 p-0" href="/admin/kategori">
                       <div class="quick-actions-item">
                         <div class="avatar-item bg-info rounded-circle">
-                          <i class="fas fa-file-excel"></i>
+                          <i class="fas fa-book"></i>
                         </div>
-                        <span class="text">Reports</span>
+                        <span class="text">Kategori Faskes</span>
                       </div>
                     </a>
-                    <a class="col-6 col-md-4 p-0" href="#">
+                    @if (Auth::user()->role == 'administrator')
+                    <a class="col-6 col-md-4 p-0" href="/admin/provinsi">
                       <div class="quick-actions-item">
                         <div
                           class="avatar-item bg-success rounded-circle"
                         >
-                          <i class="fas fa-envelope"></i>
+                          <i class="fas fa-globe"></i>
                         </div>
-                        <span class="text">Emails</span>
+                        <span class="text">Provinsi</span>
                       </div>
                     </a>
-                    <a class="col-6 col-md-4 p-0" href="#">
+                    <a class="col-6 col-md-4 p-0" href="/admin/kabkota">
                       <div class="quick-actions-item">
                         <div
                           class="avatar-item bg-primary rounded-circle"
                         >
-                          <i class="fas fa-file-invoice-dollar"></i>
+                          <i class="fas fa-map"></i>
                         </div>
-                        <span class="text">Invoice</span>
+                        <span class="text">Kabupaten/Kota</span>
                       </div>
                     </a>
-                    <a class="col-6 col-md-4 p-0" href="#">
-                      <div class="quick-actions-item">
-                        <div
-                          class="avatar-item bg-secondary rounded-circle"
-                        >
-                          <i class="fas fa-credit-card"></i>
-                        </div>
-                        <span class="text">Payments</span>
-                      </div>
-                    </a>
+                    @endif
                   </div>
                 </div>
               </div>
@@ -336,7 +328,7 @@
               </div>
               <span class="profile-username">
                 <span class="op-7">Hi,</span>
-                <span class="fw-bold">Hizrian</span>
+                <span class="fw-bold">{{ Auth::user()->name }}</span>
               </span>
             </a>
             <ul class="dropdown-menu dropdown-user animated fadeIn">
@@ -351,10 +343,11 @@
                       />
                     </div>
                     <div class="u-text">
-                      <h4>Hizrian</h4>
-                      <p class="text-muted">hello@example.com</p>
+                      <h4>{{ Auth::user()->name }}</h4>
+                      <p class="text-muted mb-0">{{ Auth::user()->email }}</p>
+                      <p class="text-muted mt-0">Role: {{Auth::user()->role}}</p>
                       <a
-                        href="profile.html"
+                        href="{{ route('profile.edit') }}"
                         class="btn btn-xs btn-secondary btn-sm"
                         >View Profile</a
                       >
@@ -363,13 +356,19 @@
                 </li>
                 <li>
                   <div class="dropdown-divider"></div>
-                  <a class="dropdown-item" href="#">My Profile</a>
+                  <a class="dropdown-item" href="{{ route('profile.edit') }}">My Profile</a>
                   <a class="dropdown-item" href="#">My Balance</a>
                   <a class="dropdown-item" href="#">Inbox</a>
                   <div class="dropdown-divider"></div>
                   <a class="dropdown-item" href="#">Account Setting</a>
                   <div class="dropdown-divider"></div>
-                  <a class="dropdown-item" href="#">Logout</a>
+                  <form action="{{ route('logout') }}" method="POST">
+                    @csrf
+                    <button class="dropdown-item d-flex align-items-center">
+                      <span>Log Out</span>
+                    </button>
+                  </form>
+                  {{-- <a class="dropdown-item" href="#">Logout</a> --}}
                 </li>
               </div>
             </ul>

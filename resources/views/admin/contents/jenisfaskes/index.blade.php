@@ -17,10 +17,13 @@
     <div class="row">
         <div class="card">
           <div class="card-body py-3">
+            @if (Auth::user()->role == 'administrator')
             <div class="d-flex justify-content-end me-5">
                 <a href="{{ route('jenis.create') }}" class="btn btn-primary my-3 btn-rounded">+ Jenis Faskes</a>
             </div>
+            @endif
             <div class="table-responsive">
+                @if (Auth::user()->role == 'faskes')
                 <table class="table display table-striped table-hover table-bordered table-head-bg-danger table-bordered-bd-danger" id="add-row">
                     <thead>
                         <tr class="text-center">
@@ -64,6 +67,8 @@
                     </tbody>
                 </table>
 
+                @else
+
                 <table class="table display table-striped table-hover table-bordered table-head-bg-danger table-bordered-bd-danger" id="add-row">
                     <thead>
                         <tr class="text-center">
@@ -88,6 +93,7 @@
                         @endforeach
                     </tbody>
                 </table>
+                @endif
             </div>
           </div>
         </div>
