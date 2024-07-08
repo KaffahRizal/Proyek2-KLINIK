@@ -17,11 +17,11 @@
     <div class="row">
         <div class="card">
           <div class="card-body py-3">
-            <h2 class="p-3">Tambah Data faskes</h2>
+            <h2 class="p-3">Tambah Data Fasilitas Kesehatan</h2>
             <form action="{{ route('faskes.store') }}" method="POST" class="py-3">
                 @csrf
                 <div class="form-group row d-flex justify-content-center">
-                    <label for="nama" class="col-form-label col-8">Nama faskes</label> 
+                    <label for="nama" class="col-form-label col-8">Nama Fasilitas Kesehatan</label> 
                     <div class="col-8">
                         <input id="nama" name="nama" type="text" class="form-control border border-secondary border-2">
                     </div>
@@ -64,7 +64,7 @@
                 <div class="form-group row d-flex justify-content-center">
                     <label for="rating" class="col-form-label col-8">Rating</label> 
                     <div class="col-8">
-                        <input id="rating" name="rating" type="number" class="form-control border border-secondary border-2">
+                        <input id="rating" name="rating" type="text" class="form-control border border-secondary border-2">
                     </div>
                 </div>
                 <div class="form-group row d-flex justify-content-center">
@@ -74,9 +74,9 @@
                     </div>
                 </div>
                 <div class="form-group row d-flex justify-content-center">
-                    <label for="longtitude" class="col-form-label col-8">Longtitude</label> 
+                    <label for="longitude" class="col-form-label col-8">Longtitude</label> 
                     <div class="col-8">
-                    <input id="longtitude" name="longtitude" type="text" class="form-control border border-secondary border-2">
+                    <input id="longitude" name="longitude" type="text" class="form-control border border-secondary border-2">
                     </div>
                 </div>
                 <div class="form-group row d-flex justify-content-center">

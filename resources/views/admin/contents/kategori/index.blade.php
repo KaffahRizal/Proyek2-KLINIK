@@ -26,6 +26,29 @@
                         <tr class="text-center">
                             <th>No.</th>
                             <th>Kategori Fasilitas Kesehatan</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="text-center">
+                            <td>1.</td>
+                            <td>Fasilitas Kesehatan Tingkat Pertama</td>
+                        </tr>
+                        <tr class="text-center">
+                            <td>2.</td>
+                            <td>Fasilitas Kesehatan Tingkat Kedua</td>
+                        </tr>
+                        <tr class="text-center">
+                            <td>3.</td>
+                            <td>Fasilitas Kesehatan Tingkat Lanjutan</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <table class="table display table-striped table-hover table-bordered table-head-bg-secondary table-bordered-bd-secondary" id="add-row">
+                    <thead>
+                        <tr class="text-center">
+                            <th>No.</th>
+                            <th>Kategori Fasilitas Kesehatan</th>
                             <th>Action</th>
                         </tr>
                     </thead>

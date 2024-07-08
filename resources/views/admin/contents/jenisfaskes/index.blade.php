@@ -26,6 +26,49 @@
                         <tr class="text-center">
                             <th>No.</th>
                             <th>Jenis Fasilitas Kesehatan</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="text-center">
+                            <td>1.</td>
+                            <td>Puskesmas</td>
+                        </tr>
+                        <tr class="text-center">
+                            <td>2.</td>
+                            <td>Klinik</td>
+                        </tr>
+                        <tr class="text-center">
+                            <td>3.</td>
+                            <td>Dokter Umum</td>
+                        </tr>
+                        <tr class="text-center">
+                            <td>4.</td>
+                            <td>Dokter Spesialis</td>
+                        </tr>
+                        <tr class="text-center">
+                            <td>5.</td>
+                            <td>Dokter Gigi</td>
+                        </tr>
+                        <tr class="text-center">
+                            <td>6.</td>
+                            <td>Rumah Sakit Umum</td>
+                        </tr>
+                        <tr class="text-center">
+                            <td>7.</td>
+                            <td>Rumah Sakit Khusus</td>
+                        </tr>
+                        <tr class="text-center">
+                            <td>8.</td>
+                            <td>Klinik Utama</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <table class="table display table-striped table-hover table-bordered table-head-bg-danger table-bordered-bd-danger" id="add-row">
+                    <thead>
+                        <tr class="text-center">
+                            <th>No.</th>
+                            <th>Jenis Fasilitas Kesehatan</th>
                             <th>Action</th>
                         </tr>
                     </thead>
