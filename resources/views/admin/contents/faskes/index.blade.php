@@ -26,7 +26,7 @@
                         <tr class="text-center">
                             <th>No.</th>
                             <th>Nama</th>
-                            {{-- <th>Nama Pengelola</th> --}}
+                            <th>Nama Pengelola</th>
                             <th>Alamat</th>
                             <th>Website</th>
                             {{-- <th>Email</th> --}}
@@ -44,10 +44,10 @@
                         <tr class="text-center">
                             <td>{{ $loop->iteration }}</td>
                             <td>{{ $fas->nama }}</td>
-                            {{-- <td>{{ $fas->nama_pengelola }}</td> --}}
-                            <td>{{ $fas->alamat }}</td>
+                            <td>{{ $fas->nama_pengelola }}</td>
+                            {{-- <td>{{ $fas->alamat }}</td> --}}
                             <td><a href="{{ $fas->website }}">{{ $fas->website }}</a></td>
-                            {{-- <td>{{ $fas->email }}</td> --}}
+                            <td>{{ $fas->email }}</td>
                             <td>{{ $fas->kabkota->nama }}</td>
                             <td>{{ $fas->rating }}</td>
                             {{-- <td>{{ $fas->latitude }}</td>
