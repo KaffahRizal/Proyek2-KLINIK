@@ -13,9 +13,9 @@ return new class extends Migration
     {
         Schema::create('kabkota', function (Blueprint $table) {
             $table->id();
-            $table->string('nama');
+            $table->string('nama', '100');
             $table->string('latitude');
-            $table->string('longtitude');
+            $table->string('longitude');
             $table->foreignId('provinsi_id');
             $table->timestamps();
         });

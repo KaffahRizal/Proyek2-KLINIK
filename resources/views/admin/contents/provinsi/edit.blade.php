@@ -49,11 +49,11 @@
                     </div>
                 </div>
                 <div class="form-group row d-flex justify-content-center">
-                    <label for="longtitude" class="col-form-label col-8">Longtitude</label> 
+                    <label for="longitude" class="col-form-label col-8">Longtitude</label> 
                     <div class="col-8">
-                    <input id="longtitude" name="longtitude" type="text" 
+                    <input id="longitude" name="longitude" type="text" 
                         class="form-control border border-secondary border-2"
-                        value="{{ $provinsi->longtitude ?? '' }}"
+                        value="{{ $provinsi->longitude ?? '' }}"
                     >
                     </div>
                 </div>

@@ -40,11 +40,11 @@
                     </div>
                 </div>
                 <div class="form-group row d-flex justify-content-center">
-                    <label for="longtitude" class="col-form-label col-8">Longtitude</label> 
+                    <label for="longitude" class="col-form-label col-8">Longitude</label> 
                     <div class="col-8">
-                    <input id="longtitude" name="longtitude" type="text" 
+                    <input id="longitude" name="longitude" type="text" 
                         class="form-control border border-secondary border-2"
-                        value="{{ $kabkota->longtitude ?? '' }}"
+                        value="{{ $kabkota->longitude ?? '' }}"
                     >
                     </div>
                 </div>
@@ -62,7 +62,7 @@
                 <input type="hidden" name="id" id="id" value="{{ $kabkota->id }}">
                 <div class="form-group row d-flex justify-content-center">
                     <div class="col-8 d-flex justify-content-center">
-                        <a href="/admin/kabkota" class="btn btn-danger btn-rounded me-3">Cancel</a>
+                        <a href="{{ route('kabkota') }}" class="btn btn-danger btn-rounded me-3">Cancel</a>
                         <button name="submit" type="submit" class="btn btn-primary btn-rounded">Ubah</button>
                     </div>
                 </div>

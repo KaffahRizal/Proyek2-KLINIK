@@ -10,7 +10,7 @@ class Provinsi extends Model
     use HasFactory;
     protected $table = 'provinsi';
 
-    protected $fillable = ['nama', 'ibukota', 'latitude', 'longtitude'];
+    protected $fillable = ['nama', 'ibukota', 'latitude', 'longitude'];
 
     public function kabkota(){
         return $this->hasMany(KabKota::class);

@@ -24,14 +24,14 @@ class ProvinsiController extends Controller
             'nama' => 'required',
             'ibukota' => 'required',
             'latitude' => 'required',
-            'longtitude' => 'required'
+            'longitude' => 'required'
         ]);
 
         Provinsi::create([
             'nama' => $request->nama,
             'ibukota' => $request->ibukota,
             'latitude' => $request->latitude,
-            'longtitude' => $request->longtitude
+            'longitude' => $request->longitude
         ]);
 
         return redirect('/admin/provinsi')->with('pesan', 'Berhasil menambah data provinsi.');
@@ -52,14 +52,14 @@ class ProvinsiController extends Controller
             'nama' => 'required',
             'ibukota' => 'required',
             'latitude' => 'required',
-            'longtitude' => 'required'
+            'longitude' => 'required'
         ]);
 
         $provinsi->update([
             'nama' => $request->nama,
             'ibukota' => $request->ibukota,
             'latitude' => $request->latitude,
-            'longtitude' => $request->longtitude
+            'longitude' => $request->longitude
         ]);
 
         return redirect('/admin/provinsi')->with('pesan', 'Berhasil mengubah data provinsi.');

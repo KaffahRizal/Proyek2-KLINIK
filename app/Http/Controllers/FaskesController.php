@@ -50,18 +50,18 @@ class FaskesController extends Controller
             'alamat' => 'required',
             'website' => 'required',
             'email' => 'required',
-            'kabkota_id' => 'required|numeric',
+            'kabkota_id' => 'required | numeric',
             'rating' => 'required',
             'latitude' => 'required',
             'longitude' => 'required',
-            'jenis_faskes_id' => 'required|numeric',
-            'kategori_id' => 'required|numeric',
+            'jenis_faskes_id' => 'required | numeric',
+            'kategori_id' => 'required | numeric',
         ]);
 
         
 
         // simpan data
-        faskes::create([
+        Faskes::create([
             'nama' => $request->nama,
             'nama_pengelola' => $request->nama_pengelola,
             'alamat' => $request->alamat,
@@ -90,14 +90,14 @@ class FaskesController extends Controller
         $kategoris = kategori::all();
 
         //cari data faskes berdasarkan id
-        $faskes = faskes::find($id);      
+        $faskes = Faskes::find($id);
 
         //kirim ke view
         return view('admin.contents.faskes.edit', [
             'faskes' => $faskes,
-            'kabkota' => $kabkota, 
+            'kabkotas' => $kabkota, 
             'jenis_faskes' => $jenis_faskes,
-            'kategoris' => $kategoris
+            'kategori' => $kategoris
         ]);
     }
 
@@ -105,7 +105,7 @@ class FaskesController extends Controller
     public function update($id,Request $request)
     {
         //cari data faskes berdasarkan id
-        $faskes = faskes::find($id);
+        $faskes = Faskes::find($id);
 
         //validasi data
         $request->validate([
@@ -145,7 +145,7 @@ class FaskesController extends Controller
     public function destroy($id)
     {
         //cari data faskes berdasarkan id
-        $faskes = faskes::find($id);
+        $faskes = Faskes::find($id);
 
         //delete data
         $faskes->delete();

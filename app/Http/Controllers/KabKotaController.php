@@ -28,14 +28,14 @@ class KabKotaController extends Controller
         $request->validate([
             'nama' => 'required',
             'latitude' => 'required',
-            'longtitude' => 'required',
+            'longitude' => 'required',
             'provinsi_id' => 'required | numeric'
         ]);
 
         KabKota::create([
             'nama' => $request->nama,
             'latitude' => $request->latitude,
-            'longtitude' => $request->longtitude,
+            'longitude' => $request->longitude,
             'provinsi_id' => $request->provinsi_id
         ]);
 
@@ -57,14 +57,14 @@ class KabKotaController extends Controller
         $request->validate([
             'nama' => 'required',
             'latitude' => 'required',
-            'longtitude' => 'required',
+            'longitude' => 'required',
             'provinsi_id' => 'required | numeric'
         ]);
 
         $kabkota->update([
             'nama' => $request->nama,
             'latitude' => $request->latitude,
-            'longtitude' => $request->longtitude,
+            'longitude' => $request->longitude,
             'provinsi_id' => $request->provinsi_id
         ]);
 

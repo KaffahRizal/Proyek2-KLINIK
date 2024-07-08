@@ -11,7 +11,7 @@ class KabKota extends Model
 
     protected $table = 'kabkota';
 
-    protected $fillable = ['nama', 'latitude', 'longtitude', 'provinsi_id'];
+    protected $fillable = ['nama', 'latitude', 'longitude', 'provinsi_id'];
 
     public function provinsi(){
         return $this->belongsTo(Provinsi::class);

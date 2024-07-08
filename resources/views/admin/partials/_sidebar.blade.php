@@ -13,7 +13,7 @@
                 class="navbar-brand bg-white rounded-pill"
                 height="40"
               />
-              <p class="h2 ms-3 mt-2 text-white">Faskes</p>
+              <p class="h2 ms-3 mt-2 text-white">Sendiri</p>
             </a>
             <div class="nav-toggle">
               <button class="btn btn-toggle toggle-sidebar">
