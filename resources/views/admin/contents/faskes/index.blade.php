@@ -17,17 +17,19 @@
     <div class="row">
         <div class="card">
           <div class="card-body py-3">
+            @if (Auth::user()->role == 'administrator')
             <div class="d-flex justify-content-end me-5">
                 <a href="{{ route('faskes.create') }}" class="btn btn-primary my-3 btn-rounded">+ Faskes</a>
             </div>
+            @endif
             <div class="table-responsive">
                 <table class="table display table-striped table-hover table-bordered table-head-bg-info table-bordered-bd-info" id="add-row">
                     <thead>
                         <tr class="text-center">
                             <th>No.</th>
                             <th>Nama</th>
-                            <th>Nama Pengelola</th>
-                            <th>Alamat</th>
+                            {{-- <th>Nama Pengelola</th> --}}
+                            {{-- <th>Alamat</th> --}}
                             <th>Website</th>
                             {{-- <th>Email</th> --}}
                             <th>Kabupaten</th>
@@ -44,10 +46,10 @@
                         <tr class="text-center">
                             <td>{{ $loop->iteration }}</td>
                             <td>{{ $fas->nama }}</td>
-                            <td>{{ $fas->nama_pengelola }}</td>
+                            {{-- <td>{{ $fas->nama_pengelola }}</td> --}}
                             {{-- <td>{{ $fas->alamat }}</td> --}}
                             <td><a href="{{ $fas->website }}">{{ $fas->website }}</a></td>
-                            <td>{{ $fas->email }}</td>
+                            {{-- <td>{{ $fas->email }}</td> --}}
                             <td>{{ $fas->kabkota->nama }}</td>
                             <td>{{ $fas->rating }}</td>
                             {{-- <td>{{ $fas->latitude }}</td>
@@ -55,12 +57,15 @@
                             <td>{{ $fas->jenis_faskes_id }}</td>
                             <td>{{ $fas->kategori_id }}</td> --}}
                             <td class="d-flex justify-content-center">
-                                <a href="{{ route('faskes.edit', $fas->id) }}" class="btn btn-warning btn-sm me-3">Edit</a>
-                                <form action="{{ route('faskes.destroy', $fas->id) }}" method="POST">
-                                    @csrf
-                                    @method('DELETE')
-                                    <button class="btn btn-danger btn-sm" type="submit" onclick="return confirm('Apakah anda yakin?')">Hapus</button>
-                                </form>
+                              <a href="#" class="btn btn-info btn-sm me-3">Lihat</a>
+                              @if (Auth::user()->role == 'administrator')
+                              <a href="{{ route('faskes.edit', $fas->id) }}" class="btn btn-warning btn-sm me-3">Edit</a>
+                              <form action="{{ route('faskes.destroy', $fas->id) }}" method="POST">
+                                  @csrf
+                                  @method('DELETE')
+                                  <button class="btn btn-danger btn-sm" type="submit" onclick="return confirm('Apakah anda yakin?')">Hapus</button>
+                              </form>
+                              @endif
                             </td>
                         </tr>
                         @endforeach

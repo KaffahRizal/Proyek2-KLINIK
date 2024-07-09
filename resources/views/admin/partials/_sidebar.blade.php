@@ -70,6 +70,7 @@
                   <p>Kategori faskes</p>
                 </a>
               </li>
+              @if (Auth::user()->role == 'administrator')
               <li class="nav-section">
                 <span class="sidebar-mini-icon">
                   <i class="fa fa-ellipsis-h"></i>
@@ -92,6 +93,7 @@
                   <p>Kabupaten Kota</p>
                 </a>
               </li>
+              @endif
             </ul>
           </div>
         </div>

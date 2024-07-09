@@ -4,13 +4,6 @@
   <div class="d-flex align-items-left align-items-md-center flex-column flex-md-row pt-2 pb-4">
       <div>
         <h3 class="fw-bold m-0">Dashboard</h3>
-        <nav>
-          <ol class="breadcrumb mb-3">
-            <li class="breadcrumb-item"><a href="/admin/dashboard">Home</a></li>
-            <li class="breadcrumb-item">Admin</li>
-            <li class="breadcrumb-item active">Dashboard</li>
-          </ol>
-        </nav>
         <h3 class="op-7 mb-2">Anda berada di halaman admin</h3>
     </div>
   </div>
