@@ -90,7 +90,14 @@
                     <div class="titlepage text_align_left">
                         <h2>Fasilitas Kesehatan Tingkat 1</h2>
                         <p class="text-justify">
-                            Fasilitas kesehatan tingkat 1 merupakan layanan kesehatan dasar yang langsung bersentuhan dengan masyarakat dan menjadi kontak pertama ketika membutuhkan pelayanan kesehatan. Faskes tingkat 1 meliputi puskesmas yang menyediakan pelayanan kesehatan dasar seperti pemeriksaan umum, imunisasi, kesehatan ibu dan anak, serta pelayanan gigi dan kesehatan lingkungan; klinik pratama dengan layanan kesehatan dasar namun lebih terbatas dibandingkan rumah sakit dan biasanya tidak memiliki layanan rawat inap; praktik dokter umum yang memberikan pelayanan kesehatan dasar di praktik pribadinya; dan praktik bidan mandiri yang memberikan layanan kesehatan ibu dan anak di praktik pribadinya.
+                            Fasilitas kesehatan tingkat 1 merupakan layanan kesehatan dasar yang langsung bersentuhan
+                            dengan masyarakat dan menjadi kontak pertama ketika membutuhkan pelayanan kesehatan. Faskes
+                            tingkat 1 meliputi puskesmas yang menyediakan pelayanan kesehatan dasar seperti pemeriksaan
+                            umum, imunisasi, kesehatan ibu dan anak, serta pelayanan gigi dan kesehatan lingkungan;
+                            klinik pratama dengan layanan kesehatan dasar namun lebih terbatas dibandingkan rumah sakit
+                            dan biasanya tidak memiliki layanan rawat inap; praktik dokter umum yang memberikan
+                            pelayanan kesehatan dasar di praktik pribadinya; dan praktik bidan mandiri yang memberikan
+                            layanan kesehatan ibu dan anak di praktik pribadinya.
                         </p>
                     </div>
                 </div>
@@ -140,7 +147,8 @@
                             <div class="artikel-small">
                                 <div class="artikel-small-img">
                                     <div class="image-box">
-                                        <img src="{{ asset('covido') }}/assets/images/praktikmandiri.png" alt="">
+                                        <img src="{{ asset('covido') }}/assets/images/praktikmandiri.png"
+                                            alt="">
                                     </div>
                                 </div>
                                 <div class="artikel-small-content">
@@ -183,19 +191,13 @@
                 <div class="row">
                     <div class="col-lg-2 col-md-6 col-sm-6">
                         <div class="hedingh3 text_align_left">
-                            <h3>Resources</h3>
+                            <h3>Sumber</h3>
                             <ul class="menu_footer">
-                                <li><a href="index.html">Home</a>
+                                <li><a href="/">Beranda</a>
                                 <li>
-                                <li><a href="javascript:void(0)">What we do</a>
+                                <li><a href="/profil">Profil</a>
                                 <li>
-                                <li> <a href="javascript:void(0)">Media</a>
-                                <li>
-                                <li> <a href="javascript:void(0)">Travel Advice</a>
-                                <li>
-                                <li><a href="javascript:void(0)">Protection</a>
-                                <li>
-                                <li><a href="javascript:void(0)">Care</a>
+                                <li> <a href="/kontak">Kontak</a>
                                 <li>
                             </ul>
 
@@ -204,10 +206,11 @@
                     </div>
                     <div class="col-lg-3 col-md-6 col-sm-6">
                         <div class="hedingh3 text_align_left">
-                            <h3>About</h3>
-                            <p>Many desktop publishing packages and web page editors now use Lorem Ipsum as their
-                                default model text, and a search for 'lorem ipsum' will uncover many web sites still in
-                                their infancy. Various</p>
+                            <h3>PROFIL</h3>
+                            <p>
+                                Sehat Mandiri bertujuan untuk memberikan akses yang mudah dan praktis
+                                kepada masyarakat untuk mendapatkan informasi seputar kesehatan dan gaya hidup sehat.
+                            </p>
                         </div>
                     </div>
 
@@ -215,16 +218,16 @@
 
                     <div class="col-lg-3 col-md-6 col-sm-6">
                         <div class="hedingh3  text_align_left">
-                            <h3>Contact Us</h3>
+                            <h3>Hubungi Kami</h3>
                             <ul class="top_infomation">
                                 <li><i class="fa fa-map-marker" aria-hidden="true"></i>
-                                    Making this the first true
+                                    INDONESIA
                                 </li>
                                 <li><i class="fa fa-phone" aria-hidden="true"></i>
-                                    Call : +01 1234567890
+                                    +62 1234567890
                                 </li>
                                 <li><i class="fa fa-envelope" aria-hidden="true"></i>
-                                    <a href="Javascript:void(0)">Email : demo@gmail.com</a>
+                                    <a href="Javascript:void(0)">sendiri@gmail.com</a>
                                 </li>
                             </ul>
 
@@ -233,9 +236,9 @@
                     </div>
                     <div class="col-lg-4 col-md-6 col-sm-6">
                         <div class="hedingh3 text_align_left">
-                            <h3>countrys</h3>
+                            <h3>Negara</h3>
                             <div class="map">
-                                <img src="images/map.png" alt="#" />
+                                <img src="{{ asset('covido') }}/assets/images/indo11.png" alt="#" />
                             </div>
                         </div>
                     </div>
@@ -246,8 +249,8 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-md-8 offset-md-2">
-                            <p>© 2020 All Rights Reserved. Design by <a href="https://html.design/"> Free html
-                                    Templates</a></p>
+                            <p>© 2020 All Rights Reserved. Design by <a href="https://html.design/">Sehat Mandiri</a>
+                            </p>
                         </div>
                     </div>
                 </div>

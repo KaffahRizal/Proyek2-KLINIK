@@ -73,10 +73,10 @@
 
             <ul class="navbar-nav ml-4">
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Masuk</a>
+                    <a class="nav-link" href="/masuk">Masuk</a>
                 </li>
                 <li class="nav-item ml-2">
-                    <a class="nav-link" href="#">Daftar</a>
+                    <a class="nav-link" href="/daftar">Daftar</a>
                 </li>
             </ul>
         </div>
@@ -121,7 +121,7 @@
                             mulai dari tips kesehatan, informasi mengenai berbagai jenis penyakit, hingga gaya hidup
                             sehat.
                         </p>
-                        <a class="read_more" href="/about">About More</a>
+                        <a class="read_more" href="/profil">About More</a>
                     </div>
                 </div>
                 <div class="col-md-5">
@@ -153,7 +153,7 @@
                             dalam mengetahui dan mengakses berbagai data yang diinginkan terkait pelayanan kesehatan
                             dalam satu buah Landing Page.
                         </p>
-                        <a class="read_more" href="#">About More</a>
+                        <a class="read_more" href="faskes/form">Tambah Faskes</a>
                     </div>
                 </div>
             </div>
@@ -346,13 +346,13 @@
                 <div class="row">
                     <div class="col-lg-2 col-md-6 col-sm-6">
                         <div class="hedingh3 text_align_left">
-                            <h3>Resources</h3>
+                            <h3>Sumber</h3>
                             <ul class="menu_footer">
                                 <li><a href="/">Beranda</a>
                                 <li>
-                                <li><a href="/about">Profil</a>
+                                <li><a href="/profil">Profil</a>
                                 <li>
-                                <li> <a href="javascript:void(0)">Kontak</a>
+                                <li> <a href="/kontak">Kontak</a>
                                 <li>
                             </ul>
 
@@ -361,10 +361,11 @@
                     </div>
                     <div class="col-lg-3 col-md-6 col-sm-6">
                         <div class="hedingh3 text_align_left">
-                            <h3>About</h3>
-                            <p>Many desktop publishing packages and web page editors now use Lorem Ipsum as their
-                                default model text, and a search for 'lorem ipsum' will uncover many web sites still in
-                                their infancy. Various</p>
+                            <h3>PROFIL</h3>
+                            <p>
+                                Sehat Mandiri bertujuan untuk memberikan akses yang mudah dan praktis
+                                kepada masyarakat untuk mendapatkan informasi seputar kesehatan dan gaya hidup sehat.
+                            </p>
                         </div>
                     </div>
 
@@ -372,16 +373,16 @@
 
                     <div class="col-lg-3 col-md-6 col-sm-6">
                         <div class="hedingh3  text_align_left">
-                            <h3>Contact Us</h3>
+                            <h3>Hubungi Kami</h3>
                             <ul class="top_infomation">
                                 <li><i class="fa fa-map-marker" aria-hidden="true"></i>
-                                    Making this the first true
+                                    INDONESIA
                                 </li>
                                 <li><i class="fa fa-phone" aria-hidden="true"></i>
-                                    Call : +01 1234567890
+                                    +62 1234567890
                                 </li>
                                 <li><i class="fa fa-envelope" aria-hidden="true"></i>
-                                    <a href="Javascript:void(0)">Email : demo@gmail.com</a>
+                                    <a href="Javascript:void(0)">sendiri@gmail.com</a>
                                 </li>
                             </ul>
 
@@ -390,9 +391,9 @@
                     </div>
                     <div class="col-lg-4 col-md-6 col-sm-6">
                         <div class="hedingh3 text_align_left">
-                            <h3>countrys</h3>
+                            <h3>Negara</h3>
                             <div class="map">
-                                <img src="{{ asset('covido') }}/assets/images/map.png" alt="#" />
+                                <img src="{{ asset('covido') }}/assets/images/indo11.png" alt="#" />
                             </div>
                         </div>
                     </div>
@@ -403,8 +404,8 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-md-8 offset-md-2">
-                            <p>© 2020 All Rights Reserved. Design by <a href="https://html.design/"> Free html
-                                    Templates</a></p>
+                            <p>© 2020 All Rights Reserved. Design by <a href="https://html.design/">Sehat Mandiri</a>
+                            </p>
                         </div>
                     </div>
                 </div>

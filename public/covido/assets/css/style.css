@@ -1026,7 +1026,7 @@ ul.menu_footer li a {
 }
 
 ul.menu_footer li a:hover {
-    color: #e92f0b;
+    color: #55AD9B;
 }
 
 
@@ -1061,11 +1061,11 @@ ul.top_infomation li a {
 }
 
 ul.top_infomation li a:hover {
-    color: #e92f0b;
+    color: #55AD9B;
 }
 
 ul.top_infomation li i:hover {
-    background: #eb4746;
+    background: #55AD9B;
     color: #fff;
     border-radius: 25px;
     cursor: pointer;
@@ -1094,7 +1094,7 @@ ul.top_infomation li i:hover {
 }
 
 .copyright a:hover {
-    color: #ed1c24;
+    color: #55AD9B;
 }
 
 
@@ -1145,3 +1145,13 @@ padding-bottom: 40px;}
      width: 100%;
 }
 
+.card {
+     margin-top: 150px;
+     margin-bottom: 100px;
+     width: 100%;
+     max-width: 800px;
+ }
+ .form-group {
+     padding-left: 20px;
+     padding-right: 20px;
+ }

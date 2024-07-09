@@ -90,14 +90,18 @@
                     <div class="titlepage text_align_left">
                         <h2>About Sehat Mandiri</h2>
                         <p>
-                           Sehat Mandiri bertujuan untuk memberikan akses yang mudah dan praktis kepada masyarakat untuk mendapatkan informasi seputar kesehatan dan gaya hidup sehat. Kami menyediakan konten-konten yang dapat membantu Anda meningkatkan kesehatan secara menyeluruh, mulai dari tips kesehatan, informasi mengenai berbagai jenis penyakit, hingga gaya hidup sehat.
+                            Sehat Mandiri bertujuan untuk memberikan akses yang mudah dan praktis kepada masyarakat
+                            untuk mendapatkan informasi seputar kesehatan dan gaya hidup sehat. Kami menyediakan
+                            konten-konten yang dapat membantu Anda meningkatkan kesehatan secara menyeluruh, mulai dari
+                            tips kesehatan, informasi mengenai berbagai jenis penyakit, hingga gaya hidup sehat.
                         </p>
                         {{-- <a class="read_more" href="about.html">About More</a> --}}
                     </div>
                 </div>
                 <div class="col-md-5">
                     <div class="about_img text_align_center">
-                        <figure><img src="{{ asset('covido') }}/assets/images/logoSendiri.png" alt="#" /></figure>
+                        <figure><img src="{{ asset('covido') }}/assets/images/logoSendiri.png" alt="#" />
+                        </figure>
                     </div>
                 </div>
             </div>
@@ -105,26 +109,29 @@
     </div>
     <!-- end about -->
     <div class="coronata">
-      <div class="container">
-          <div class="row d_flex grid">
-              <div class="col-md-7">
-                  <div class="coronata_img text_align_center">
-                      <figure><img src="{{ asset('covido') }}/assets/images/dokter1.png" alt="#" />
-                      </figure>
-                  </div>
-              </div>
-              <div class="col-md-5 oder1">
-                  <div class="titlepage text_align_left">
-                      <h2>Misi Kami</h2>
-                      <p class="text-justify">
-                        Kami berkomitmen untuk memberikan informasi yang akurat dan telah diverifikasi oleh para ahli kesehatan, menyediakan sumber daya yang dapat diandalkan dalam bentuk artikel, video, dan infografis yang mudah dipahami dan bermanfaat bagi berbagai kalangan, serta mendorong gaya hidup sehat melalui inspirasi dan motivasi dengan berbagai program dan inisiatif.
-                      </p>
-                      {{-- <a class="read_more" href="coronata.html">About More</a> --}}
-                  </div>
-              </div>
-          </div>
-      </div>
-  </div>
+        <div class="container">
+            <div class="row d_flex grid">
+                <div class="col-md-7">
+                    <div class="coronata_img text_align_center">
+                        <figure><img src="{{ asset('covido') }}/assets/images/dokter1.png" alt="#" />
+                        </figure>
+                    </div>
+                </div>
+                <div class="col-md-5 oder1">
+                    <div class="titlepage text_align_left">
+                        <h2>Misi Kami</h2>
+                        <p class="text-justify">
+                            Kami berkomitmen untuk memberikan informasi yang akurat dan telah diverifikasi oleh para
+                            ahli kesehatan, menyediakan sumber daya yang dapat diandalkan dalam bentuk artikel, video,
+                            dan infografis yang mudah dipahami dan bermanfaat bagi berbagai kalangan, serta mendorong
+                            gaya hidup sehat melalui inspirasi dan motivasi dengan berbagai program dan inisiatif.
+                        </p>
+                        {{-- <a class="read_more" href="coronata.html">About More</a> --}}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     <!--  footer -->
     <footer>
         <div class="footer">
@@ -132,63 +139,66 @@
                 <div class="row">
                     <div class="col-lg-2 col-md-6 col-sm-6">
                         <div class="hedingh3 text_align_left">
-                            <h3>Resources</h3>
+                            <h3>Sumber</h3>
                             <ul class="menu_footer">
-                                <li><a href="index.html">Home</a>
+                                <li><a href="/">Beranda</a>
                                 <li>
-                                <li><a href="javascript:void(0)">What we do</a>
+                                <li><a href="/profil">Profil</a>
                                 <li>
-                                <li><a href="javascript:void(0)">Media</a>
-                                <li>
-                                <li><a href="javascript:void(0)">Travel Advice</a>
-                                <li>
-                                <li><a href="javascript:void(0)">Protection</a>
-                                <li>
-                                <li><a href="javascript:void(0)">Care</a>
+                                <li> <a href="/kontak">Kontak</a>
                                 <li>
                             </ul>
+
+
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-6 col-sm-6">
                         <div class="hedingh3 text_align_left">
-                            <h3>About</h3>
-                            <p>Many desktop publishing packages and web page editors now use Lorem Ipsum as their
-                                default model text, and a search for 'lorem ipsum' will uncover many web sites still in
-                                their infancy. Various</p>
+                            <h3>PROFIL</h3>
+                            <p>
+                                Sehat Mandiri bertujuan untuk memberikan akses yang mudah dan praktis
+                                kepada masyarakat untuk mendapatkan informasi seputar kesehatan dan gaya hidup sehat.
+                            </p>
                         </div>
                     </div>
+
+
+
                     <div class="col-lg-3 col-md-6 col-sm-6">
                         <div class="hedingh3  text_align_left">
-                            <h3>Contact Us</h3>
+                            <h3>Hubungi Kami</h3>
                             <ul class="top_infomation">
                                 <li><i class="fa fa-map-marker" aria-hidden="true"></i>
-                                    Making this the first true
+                                    INDONESIA
                                 </li>
                                 <li><i class="fa fa-phone" aria-hidden="true"></i>
-                                    Call : +01 1234567890
+                                    +62 1234567890
                                 </li>
                                 <li><i class="fa fa-envelope" aria-hidden="true"></i>
-                                    <a href="Javascript:void(0)">Email : demo@gmail.com</a>
+                                    <a href="Javascript:void(0)">sendiri@gmail.com</a>
                                 </li>
                             </ul>
+
+
                         </div>
                     </div>
                     <div class="col-lg-4 col-md-6 col-sm-6">
                         <div class="hedingh3 text_align_left">
-                            <h3>countrys</h3>
+                            <h3>Negara</h3>
                             <div class="map">
-                                <img src="images/map.png" alt="#" />
+                                <img src="{{ asset('covido') }}/assets/images/indo11.png" alt="#" />
                             </div>
                         </div>
                     </div>
+
                 </div>
             </div>
             <div class="copyright">
                 <div class="container">
                     <div class="row">
                         <div class="col-md-8 offset-md-2">
-                            <p>© 2020 All Rights Reserved. Design by <a href="https://html.design/"> Free html
-                                    Templates</a></p>
+                            <p>© 2020 All Rights Reserved. Design by <a href="https://html.design/">Sehat Mandiri</a>
+                            </p>
                         </div>
                     </div>
                 </div>

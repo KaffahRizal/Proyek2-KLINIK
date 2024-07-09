@@ -4,7 +4,7 @@
       <div class="logo-header" data-background-color="dark">
         <a href="index.html" class="logo">
           <img
-            src="{{asset('kaiadmin')}}/assets/img/kaiadmin/logo_light.svg"
+            src="{{asset('kaiadmin')}}/assets/img/kaiadmin/logofsks.png"
             alt="navbar brand"
             class="navbar-brand"
             height="20"
@@ -25,7 +25,7 @@
       <!-- End Logo Header -->
     </div>
     <!-- Navbar Header -->
-    <nav class="navbar navbar-header navbar-header-transparent navbar-expand-lg border-bottom">
+    <nav class="navbar navbar-header navbar-header-transparent navbar-expand-lg border-bottom" data-background-color="green">
       <div class="container-fluid">
         <nav
           class="navbar navbar-header-left navbar-expand-lg navbar-form nav-search p-0 d-none d-lg-flex"
@@ -171,8 +171,10 @@
               aria-haspopup="true"
               aria-expanded="false"
             >
-              <i class="fa fa-bell"></i>
-              <span class="notification">4</span>
+              <i class="fa fa-bell">
+                <span class="position-absolute top-60 start-60 translate-middle badge rounded-pill bg-danger">4</span>
+              </i>
+              {{-- <span class="notification">4</span> --}}
             </a>
             <ul
               class="dropdown-menu notif-box animated fadeIn"
