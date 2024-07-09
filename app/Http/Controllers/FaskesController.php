@@ -153,4 +153,60 @@ class FaskesController extends Controller
         //kembali ke halaman faskes
         return redirect('/admin/faskes')->with('pesan', 'Faskes deleted successfully!');
     }
+
+    public function form()
+    {
+        // ambil data kabkota berdasarkan id
+        $kabkota = kabkota::all();
+        // ambil data jenis faskes
+        $jenis_faskes = JenisFaskes::all();
+        // ambil data kategori
+        $kategoris = kategori::all();
+
+        return view('tambahfaskes' , [
+            'kabkota' => $kabkota,
+            'jenis_faskes' => $jenis_faskes,
+            'kategoris' => $kategoris
+        ]);
+    }
+
+    public function tambah(Request $request)
+    {   
+        
+        $request->validate([
+            'nama' => 'required',
+            'nama_pengelola' => 'required',
+            'alamat' => 'required',
+            'website' => 'required',
+            'email' => 'required',
+            'kabkota_id' => 'required | numeric',
+            'rating' => 'required',
+            'latitude' => 'required',
+            'longitude' => 'required',
+            'jenis_faskes_id' => 'required | numeric',
+            'kategori_id' => 'required | numeric',
+        ]);
+
+        
+
+        // simpan data
+        Faskes::create([
+            'nama' => $request->nama,
+            'nama_pengelola' => $request->nama_pengelola,
+            'alamat' => $request->alamat,
+            'website' => $request->website,
+            'email' => $request->email,
+            'kabkota_id' => $request->kabkota_id,
+            'rating' => $request->rating,
+            'latitude' => $request->latitude,
+            'longitude' => $request->longitude,
+            'jenis_faskes_id' => $request->jenis_faskes_id,
+            'kategori_id' => $request->kategori_id,
+        ]);
+
+        // kembali ke halaman faskes
+        return redirect('/admin/faskes')->with('pesan', 'Faskes created successfully!');
+
+    }
+
 }

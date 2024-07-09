@@ -13,6 +13,42 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/profil', function () {
+    return view('profil');
+});
+
+Route::get('/kontak', function () {
+    return view('kontak');
+});
+
+Route::get('/faskes1', function () {
+    return view('faskes1');
+});
+
+Route::get('/faskes2', function () {
+    return view('faskes2');
+});
+
+Route::get('/faskes3', function () {
+    return view('faskes3');
+});
+
+Route::get('/masuk', function () {
+    return view('masuk');
+});
+
+Route::get('/daftar', function () {
+    return view('daftar');
+});
+
+Route::get('faskes/form', [
+    FaskesController::class, 'form'
+]);
+
+Route::post('faskes/tambah', [
+    FaskesController::class, 'tambah'
+]);
+
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
