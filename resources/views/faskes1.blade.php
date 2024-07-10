@@ -9,7 +9,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="viewport" content="initial-scale=1, maximum-scale=1">
     <!-- site metas -->
-    <title>Covido</title>
+    <title>SENDIRI</title>
+    <link
+        rel="icon"
+        href="{{asset('kaiadmin')}}/assets/img/kaiadmin/favicon.ico"
+        type="image/x-icon"
+        />
+        
     <meta name="keywords" content="">
     <meta name="description" content="">
     <meta name="author" content="">
@@ -69,21 +75,28 @@
                     <a class="nav-link" href="/kontak">Kontak</a>
                 </li>
 
-            </ul>
-
-            <ul class="navbar-nav ml-4">
+                @if (Route::has('login'))    
+                @auth
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Masuk</a>
+                    <a class="nav-link" href="{{ url('/admin/dashboard') }}">Dashboard</a>
                 </li>
-                <li class="nav-item ml-2">
-                    <a class="nav-link" href="#">Daftar</a>
+                @else
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ route('login') }}">Masuk</a>
                 </li>
+                    @if (Route::has('register'))
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ route('register') }}">Daftar</a>
+                    </li>
+                    @endif
+                @endauth
+                @endif
             </ul>
         </div>
     </nav>
     <!-- end header -->
     <!-- contact -->
-    <div class="coronata">
+    <div class="faskes">
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
@@ -103,7 +116,7 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-md-6 mb-3">
+                <div class="col-md-6">
                     <div class="card">
                         <a href="#">
                             <div class="artikel-small">
@@ -122,7 +135,7 @@
                         </a>
                     </div>
                 </div>
-                <div class="col-md-6 mb-3">
+                <div class="col-md-6">
                     <div class="card">
                         <a href="#">
                             <div class="artikel-small">
@@ -141,7 +154,7 @@
                         </a>
                     </div>
                 </div>
-                <div class="col-md-6 mb-3">
+                <div class="col-md-6 ">
                     <div class="card">
                         <a href="#">
                             <div class="artikel-small">
@@ -161,7 +174,7 @@
                         </a>
                     </div>
                 </div>
-                <div class="col-md-6 mb-3">
+                <div class="col-md-6">
                     <div class="card">
                         <a href="#">
                             <div class="artikel-small">
@@ -179,7 +192,8 @@
                             </div>
                         </a>
                     </div>
-                </div>
+                </div>
+
             </div>
         </div>
     </div>
