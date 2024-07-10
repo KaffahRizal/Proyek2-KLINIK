@@ -75,15 +75,22 @@
                     <a class="nav-link active" href="/kontak">Kontak</a>
                 </li>
 
-            </ul>
-
-            <ul class="navbar-nav ml-4">
+                @if (Route::has('login'))    
+                @auth
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Masuk</a>
+                    <a class="nav-link" href="{{ url('/admin/dashboard') }}">Dashboard</a>
                 </li>
-                <li class="nav-item ml-2">
-                    <a class="nav-link" href="#">Daftar</a>
+                @else
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ route('login') }}">Masuk</a>
                 </li>
+                    @if (Route::has('register'))
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ route('register') }}">Daftar</a>
+                    </li>
+                    @endif
+                @endauth
+                @endif
             </ul>
         </div>
     </nav>

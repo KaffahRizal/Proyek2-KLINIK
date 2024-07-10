@@ -205,7 +205,7 @@ class FaskesController extends Controller
         ]);
 
         // kembali ke halaman faskes
-        return redirect('/admin/faskes')->with('pesan', 'Faskes created successfully!');
+        return redirect('/')->with('pesan', 'Faskes created successfully!');
 
     }
 

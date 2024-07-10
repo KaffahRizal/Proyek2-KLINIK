@@ -75,15 +75,22 @@
                     <a class="nav-link" href="/kontak">Kontak</a>
                 </li>
 
-            </ul>
-
-            <ul class="navbar-nav ml-4">
+                @if (Route::has('login'))    
+                @auth
                 <li class="nav-item">
-                    <a class="nav-link" href="/masuk">Masuk</a>
+                    <a class="nav-link" href="{{ url('/admin/dashboard') }}">Dashboard</a>
                 </li>
-                <li class="nav-item ml-2">
-                    <a class="nav-link" href="/daftar">Daftar</a>
+                @else
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ route('login') }}">Masuk</a>
                 </li>
+                    @if (Route::has('register'))
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ route('register') }}">Daftar</a>
+                    </li>
+                    @endif
+                @endauth
+                @endif
             </ul>
         </div>
     </nav>
@@ -245,9 +252,9 @@
             <div class="row">
                 <div class="col-md-12">
                     <div class="titlepage text_align_center ">
-                        <h2>Layanan Unggulan</h2>
+                        <h2>Informasi Fasilitas Kesehatan</h2>
                         <p>
-                            Bagian ini menyoroti layanan unggulan yang tersedia di setiap tingkatan fasilitas kesehatan.
+                            Bagian ini menyoroti informasi fasilitas kesehatan yang tersedia di website kami.
                         </p>
                     </div>
                 </div>
@@ -255,48 +262,39 @@
             <div class="row d_flex">
                 <div class=" col-md-4">
                     <div class="latest text_align_center justify-content-center">
-                        <figure><img src="{{ asset('covido') }}/assets/images/gawatdarurat.jpg" alt="#" />
+                        <figure><img src="{{ asset('covido') }}/assets/images/rsud.jpg" alt="#" />
                         </figure>
                         {{-- <a class="read_more" href="cases.html">Read More</a> --}}
                         <div class="nostrud">
-                            <h3>Pelayanan Gawat Darurat</h3>
+                            <h3>Rumah Sakit</h3>
                             <p>
-                                Pelayanan gawat darurat adalah layanan kesehatan yang diberikan untuk menangani kondisi
-                                medis yang membutuhkan penanganan cepat dan segera. Layanan ini dirancang untuk
-                                mengatasi situasi darurat medis yang bisa mengancam nyawa, fungsi organ vital, atau
-                                menyebabkan kecacatan permanen jika tidak ditangani segera.
+                                Rumah sakit adalah fasilitas kesehatan yang menyediakan layanan medis lengkap dan canggih, dengan fokus pada diagnosis, perawatan, dan rehabilitasi pasien. Fasilitas yang tersedia di rumah sakit meliputi UGD untuk penanganan kasus darurat, kamar operasi untuk prosedur bedah, ICU untuk pasien dengan kondisi kritis, dan berbagai unit rawat inap untuk pasien yang memerlukan perawatan lebih lanjut.
                             </p>
                         </div>
                     </div>
                 </div>
                 <div class=" col-md-4">
                     <div class="latest text_align_center justify-content-center">
-                        <figure><img src="{{ asset('covido') }}/assets/images/layananbedah.jpg" alt="#" />
+                        <figure><img src="{{ asset('covido') }}/assets/images/puskes.jpeg" alt="#" />
                         </figure>
                         {{-- <a class="read_more" href="cases.html">Read More</a> --}}
                         <div class="nostrud">
-                            <h3>Layanan Bedah</h3>
+                            <h3>Puskesmas</h3>
                             <p>
-                                Layanan bedah adalah bagian penting dari sistem kesehatan yang menyediakan perawatan
-                                bedah untuk mengatasi berbagai kondisi medis. Layanan ini melibatkan berbagai prosedur
-                                bedah untuk mendiagnosis, mengobati, atau mencegah penyakit, serta memperbaiki atau
-                                mengubah bagian tubuh tertentu.
+                                Puskesmas adalah Pusat Kesehatan Masyarakat yang menyediakan layanan kesehatan dasar di tingkat pemerintah daerah di Indonesia. Beberapa fasilitas yang biasanya tersedia di puskesmas meliputi pelayanan dokter umum dan spesialis seperti dokter anak dan dokter gigi, pelayanan kesehatan ibu dan anak yang mencakup pemeriksaan kehamilan, persalinan, imunisasi anak, dan konsultasi gizi.
                             </p>
                         </div>
                     </div>
                 </div>
                 <div class=" col-md-4">
                     <div class="latest text_align_center justify-content-center">
-                        <figure><img src="{{ asset('covido') }}/assets/images/layananibuanak.png" alt="#" />
+                        <figure><img src="{{ asset('covido') }}/assets/images/klinik1.jpg" alt="#" />
                         </figure>
                         {{-- <a class="read_more" href="cases.html">Read More</a> --}}
                         <div class="nostrud">
-                            <h3>Pelayanan Kesehatan Ibu Anak</h3>
+                            <h3>Klinik</h3>
                             <p>
-                                Pelayanan ini mencakup berbagai aspek perawatan kesehatan yang disesuaikan untuk
-                                perempuan hamil, pasca melahirkan, bayi, dan anak-anak. Ini mencakup pendidikan
-                                kesehatan, pencegahan penyakit, perawatan prenatal, persalinan, perawatan pasca
-                                melahirkan, dan pemantauan pertumbuhan serta perkembangan anak.
+                                Klinik adalah fasilitas kesehatan yang lebih kecil dibanding rumah sakit, tetapi lebih besar dan lengkap dibandingkan puskesmas. Klinik biasanya menyediakan layanan medis dasar dan spesialis yang lebih terbatas. Fasilitas di klinik meliputi pelayanan dokter umum dan beberapa spesialis, pelayanan gigi, laboratorium sederhana untuk tes diagnostik dasar, dan apotek untuk menyediakan obat-obatan.
                             </p>
                         </div>
                     </div>

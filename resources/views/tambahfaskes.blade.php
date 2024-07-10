@@ -40,7 +40,7 @@
 </head>
 <!-- body -->
 
-<body class="main-layout inner_page">
+<body class="main-layout">
     <!-- loader  -->
     <div class="loader_bg">
         <div class="loader"><img src="{{ asset('covido') }}/assets/images/loading.gif" alt="#" /></div>
@@ -76,66 +76,79 @@
                     <a class="nav-link" href="/kontak">Kontak</a>
                 </li>
 
-            </ul>
-
-            <ul class="navbar-nav ml-4">
+                @if (Route::has('login'))    
+                @auth
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Masuk</a>
+                    <a class="nav-link" href="{{ url('/admin/dashboard') }}">Dashboard</a>
                 </li>
-                <li class="nav-item ml-2">
-                    <a class="nav-link" href="#">Daftar</a>
+                @else
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ route('login') }}">Masuk</a>
                 </li>
+                    @if (Route::has('register'))
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ route('register') }}">Daftar</a>
+                    </li>
+                    @endif
+                @endauth
+                @endif
             </ul>
         </div>
     </nav>
     <!-- end header -->
-    <section class="section">
+
+    <section class="form">
         <div class="container">
             <div class="row d-flex justify-content-center">
+                <div class="col-md-12">
+                    <div class="titlepage text_align_left">
+                        <h2>Tambah Form Faskes</h2>
+                    </div>
+                </div>
                 <div class="card">
                     <div class="card-body">
-                        <form action="faskes/tambah" method="POST" class="py-3">
+                        <form action="/faskes/tambah" method="POST" class="py-3">
                             @csrf
                             <div class="form-group row d-flex justify-content-center">
                                 <label for="nama" class="col-form-label col-8">Nama Fasilitas Kesehatan</label>
-                                <div class="col-8">
+                                <div class="col-8 input">
                                     <input id="nama" name="nama" type="text"
-                                        class="form-control border border-secondary">
+                                        class="form-control">
                                 </div>
                             </div>
                             <div class="form-group row d-flex justify-content-center">
                                 <label for="nama_pengelola" class="col-form-label col-8">Nama Pengelola</label>
-                                <div class="col-8">
+                                <div class="col-8 input">
                                     <input id="nama_pengelola" name="nama_pengelola" type="text"
-                                        class="form-control border border-secondary">
+                                        class="form-control">
                                 </div>
                             </div>
                             <div class="form-group row d-flex justify-content-center">
                                 <label for="alamat" class="col-form-label col-8">Alamat</label>
-                                <div class="col-8">
+                                <div class="col-8 input">
                                     <input id="alamat" name="alamat" type="text"
-                                        class="form-control border border-secondary">
+                                        class="form-control">
                                 </div>
                             </div>
                             <div class="form-group row d-flex justify-content-center">
                                 <label for="website" class="col-form-label col-8">Website</label>
-                                <div class="col-8">
+                                <div class="col-8 input">
                                     <input id="website" name="website" type="text"
-                                        class="form-control border border-secondary">
+                                        class="form-control">
                                 </div>
                             </div>
                             <div class="form-group row d-flex justify-content-center">
                                 <label for="email" class="col-form-label col-8">Email</label>
-                                <div class="col-8">
+                                <div class="col-8 input">
                                     <input id="email" name="email" type="email"
-                                        class="form-control border border-secondary">
+                                        class="form-control">
                                 </div>
                             </div>
                             <div class="form-group row d-flex justify-content-center">
                                 <label for="kabkota_id" class="form-label col-8">Kabupaten/Kota</label>
-                                <div class="col-8">
+                                <div class="col-8 input">
                                     <select name="kabkota_id" id="kabkota_id"
-                                        class="custom-select form-select border border-secondary">
+                                        class="custom-select form-select">
                                         <option value="">Pilih Kabupaten/Kota</option>
                                         @foreach ($kabkota as $kabkota)
                                             <option value="{{ $kabkota->id }}">{{ $kabkota->nama }}</option>
@@ -145,30 +158,30 @@
                             </div>
                             <div class="form-group row d-flex justify-content-center">
                                 <label for="rating" class="col-form-label col-8">Rating</label>
-                                <div class="col-8">
+                                <div class="col-8 input">
                                     <input id="rating" name="rating" type="text"
-                                        class="form-control border border-secondary">
+                                        class="form-control">
                                 </div>
                             </div>
                             <div class="form-group row d-flex justify-content-center">
                                 <label for="latitude" class="col-form-label col-8">Latitude</label>
-                                <div class="col-8">
+                                <div class="col-8 input">
                                     <input id="latitude" name="latitude" type="text"
-                                        class="form-control border border-secondary">
+                                        class="form-control">
                                 </div>
                             </div>
                             <div class="form-group row d-flex justify-content-center">
                                 <label for="longitude" class="col-form-label col-8">Longitude</label>
-                                <div class="col-8">
+                                <div class="col-8 input">
                                     <input id="longitude" name="longitude" type="text"
-                                        class="form-control border border-secondary">
+                                        class="form-control">
                                 </div>
                             </div>
                             <div class="form-group row d-flex justify-content-center">
                                 <label for="jenis_faskes_id" class="col-form-label col-8">Jenis Faskes</label>
-                                <div class="col-8">
+                                <div class="col-8 input">
                                     <select name="jenis_faskes_id" id="jenis_faskes_id"
-                                        class="custom-select form-select border border-secondary">
+                                        class="custom-select form-select">
                                         <option value="">Pilih Jenis Faskes</option>
                                         @foreach ($jenis_faskes as $jenis_faskes)
                                             <option value="{{ $jenis_faskes->id }}">{{ $jenis_faskes->nama }}</option>
@@ -178,9 +191,9 @@
                             </div>
                             <div class="form-group row d-flex justify-content-center">
                                 <label for="kategori_id" class="col-form-label col-8">Kategori</label>
-                                <div class="col-8">
+                                <div class="col-8 input">
                                     <select name="kategori_id" id="kategori_id"
-                                        class="custom-select form-select border border-secondary">
+                                        class="custom-select form-select">
                                         <option value="">Pilih Kategori</option>
                                         @foreach ($kategoris as $kategori)
                                             <option value="{{ $kategori->id }}">{{ $kategori->nama }}</option>
