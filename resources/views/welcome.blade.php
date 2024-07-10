@@ -10,6 +10,12 @@
     <meta name="viewport" content="initial-scale=1, maximum-scale=1">
     <!-- site metas -->
     <title>SENDIRI</title>
+    <link
+        rel="icon"
+        href="{{asset('kaiadmin')}}/assets/img/kaiadmin/favicon.ico"
+        type="image/x-icon"
+        />
+
     <meta name="keywords" content="">
     <meta name="description" content="">
     <meta name="author" content="">

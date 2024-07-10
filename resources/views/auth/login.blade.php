@@ -48,7 +48,7 @@
     </form>
 </x-guest-layout>
 
-<!doctype html>
+{{-- <!doctype html>
 <html lang="en">
 
 <head>
@@ -94,28 +94,42 @@
                                     </p>
                                 </div>
                             </div>
-                            <form action="#" class="signin-form">
+                            <div class="mb-4">
+                                @if (session('status'))
+                                  <div class="alert alert-success">
+                                     {{ session('status') }}
+                                  </div>
+                                @endif
+                              </div>
+                            <form method="POST" action="{{ route('login') }}" class="signin-form">
+                                @csrf
+
                                 <div class="form-group mb-3">
-                                    <label class="label" for="name">Nama</label>
-                                    <input type="text" class="form-control" placeholder="Username" required>
+                                    <label class="label" for="email" :value="__('Email')">Email</label>
+                                    <input id="email" type="email" class="form-control" placeholder="Username" :value="old('email')" required
+                                    autofocus autocomplete="username" required>
                                 </div>
                                 <div class="form-group mb-3">
-                                    <label class="label" for="password">Sandi</label>
-                                    <input type="password" class="form-control" placeholder="Password" required>
+                                    <label class="label" for="password" :value="__('Password')">Sandi</label>
+                                    <input type="password" class="form-control" placeholder="Password" name="password" required
+                                    autocomplete="current-password" required>
                                 </div>
                                 <div class="form-group">
                                     <button type="submit"
-                                        class="form-control btn btn-primary rounded submit px-3">Masuk</button>
+                                        class="form-control btn btn-primary rounded submit px-3">{{ __('Masuk') }}</button>
                                 </div>
                                 <div class="form-group d-md-flex">
                                     <div class="w-50 text-left">
-                                        <label class="checkbox-wrap checkbox-primary mb-0">Remember Me
-                                            <input type="checkbox" checked>
+                                        <label for="remember_me" class="checkbox-wrap checkbox-primary mb-0" name="remember">Remember Me
+                                            <input id="remmeber_me" type="checkbox" checked>
                                             <span class="checkmark"></span>
                                         </label>
                                     </div>
                                     <div class="w-50 text-md-right">
-                                        <a href="#">Forgot Password</a>
+                                        @if (Route::has('password.request'))
+                                            
+                                        <a href="{{ route('password.request') }}">Forgot Password</a>
+                                        @endif
                                     </div>
                                 </div>
                             </form>
@@ -134,4 +148,4 @@
 
 </body>
 
-</html>
+</html> --}}

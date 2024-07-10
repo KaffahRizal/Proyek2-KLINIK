@@ -9,7 +9,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="viewport" content="initial-scale=1, maximum-scale=1">
     <!-- site metas -->
-    <title>Covido</title>
+    <title>SENDIRI</title>
+    <link
+        rel="icon"
+        href="{{asset('kaiadmin')}}/assets/img/kaiadmin/favicon.ico"
+        type="image/x-icon"
+        />
+    
     <meta name="keywords" content="">
     <meta name="description" content="">
     <meta name="author" content="">
@@ -83,7 +89,7 @@
     </nav>
     <!-- end header -->
     <!-- contact -->
-    <div class="coronata">
+    <div class="faskes">
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
@@ -96,7 +102,7 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-md-6 mb-3">
+                <div class="col-md-6">
                     <div class="card">
                         <a href="#">
                             <div class="artikel-small">
@@ -115,7 +121,7 @@
                         </a>
                     </div>
                 </div>
-                <div class="col-md-6 mb-3">
+                <div class="col-md-6">
                     <div class="card">
                         <a href="#">
                             <div class="artikel-small">
@@ -134,7 +140,7 @@
                         </a>
                     </div>
                 </div>
-                <div class="col-md-6 mb-3">
+                <div class="col-md-6">
                     <div class="card">
                         <a href="#">
                             <div class="artikel-small">

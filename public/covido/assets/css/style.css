@@ -1140,14 +1140,14 @@ padding-bottom: 40px;}
 }
 
 .artikel-small .artikel-small-content {
-     padding: 15px;
+     padding: 10px;
      /* margin-right: 10px; */
      width: 100%;
 }
 
 .card {
-     margin-top: 150px;
-     margin-bottom: 100px;
+     margin-top: 10px;
+     margin-bottom: 50px;
      width: 100%;
      max-width: 800px;
  }
@@ -1155,3 +1155,27 @@ padding-bottom: 40px;}
      padding-left: 20px;
      padding-right: 20px;
  }
+
+ .faskes {
+     background: #fff;
+    padding-top: 150px;
+   
+ }
+ 
+ .faskes .titlepage {
+      padding-bottom: 0;
+ }
+ 
+ .faskes .titlepage p {
+     font-weight: normal;
+     font-size: 17px;
+     line-height: 30px;
+     color: #111111;
+     padding: 35px 0px 50px 0px;
+ }
+ 
+ 
+ .faskes_img figure {
+      margin: 0;
+ }
+ 
