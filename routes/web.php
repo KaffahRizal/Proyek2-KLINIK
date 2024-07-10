@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\InfoController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\KabKotaController;
 use App\Http\Controllers\ProfileController;
@@ -94,8 +95,15 @@ Route::middleware('auth')->group(function () {
     Route::get('admin/faskes/create', [FaskesController::class, 'create'])->name('faskes.create')->middleware('admin');
     Route::post('/admin/faskes/create', [FaskesController::class, 'store'])->name('faskes.store')->middleware('admin');
     Route::get('admin/faskes/edit/{id}', [FaskesController::class, 'edit'])->name('faskes.edit')->middleware('admin');
+
+    Route::get('admin/faskes/info/{id}', [FaskesController::class, 'info'])->name('faskes.info')->middleware('admin');
+
     Route::put('admin/faskes/update/{id}', [FaskesController::class, 'update'])->name('faskes.update')->middleware('admin');
     Route::delete('admin/faskes/delete/{id}', [FaskesController::class, 'destroy'])->name('faskes.destroy')->middleware('admin');
+
+    
+   
+
 });
 
 require __DIR__.'/auth.php';

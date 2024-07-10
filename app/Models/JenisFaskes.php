@@ -13,7 +13,8 @@ class JenisFaskes extends Model
 
     protected $fillable = ['nama'];
 
-    public function jenisfaskes(){
+    public function jenis_faskes(){
         return $this->hasMany(Faskes::class);
     }
 }
+

@@ -1,7 +1,7 @@
 <div class="main-header">
     <div class="main-header-logo">
       <!-- Logo Header -->
-      <div class="logo-header" data-background-color="dark">
+      <div class="logo-header" style="background-color: #55AD9B">
         <a href="index.html" class="logo">
           <img
             src="{{asset('kaiadmin')}}/assets/img/kaiadmin/logofsks.png"
@@ -12,20 +12,20 @@
         </a>
         <div class="nav-toggle">
           <button class="btn btn-toggle toggle-sidebar">
-            <i class="gg-menu-right"></i>
+            <i class="gg-menu-right" style="color: #ffff"></i>
           </button>
           <button class="btn btn-toggle sidenav-toggler">
-            <i class="gg-menu-left"></i>
+            <i class="gg-menu-left" style="color: #ffff"></i>
           </button>
         </div>
         <button class="topbar-toggler more">
-          <i class="gg-more-vertical-alt"></i>
+          <i class="gg-more-vertical-alt" style="color: #ffff"></i>
         </button>
       </div>
       <!-- End Logo Header -->
     </div>
     <!-- Navbar Header -->
-    <nav class="navbar navbar-header navbar-header-transparent navbar-expand-lg border-bottom" data-background-color="green">
+    <nav class="navbar navbar-header navbar-header-transparent navbar-expand-lg border-bottom" style="background-color: #55AD9B">
       <div class="container-fluid">
         <nav
           class="navbar navbar-header-left navbar-expand-lg navbar-form nav-search p-0 d-none d-lg-flex"
@@ -80,7 +80,7 @@
               aria-haspopup="true"
               aria-expanded="false"
             >
-              <i class="fa fa-envelope"></i>
+              <i class="fa fa-envelope" style="color: #ffff"></i>
             </a>
             <ul
               class="dropdown-menu messages-notif-box animated fadeIn"
@@ -171,7 +171,7 @@
               aria-haspopup="true"
               aria-expanded="false"
             >
-              <i class="fa fa-bell">
+              <i class="fa fa-bell" style="color: #ffff">
                 <span class="position-absolute top-60 start-60 translate-middle badge rounded-pill bg-danger">4</span>
               </i>
               {{-- <span class="notification">4</span> --}}
@@ -248,7 +248,7 @@
               href="#"
               aria-expanded="false"
             >
-              <i class="fas fa-layer-group"></i>
+              <i class="fas fa-layer-group" style="color: #ffff"></i>
             </a>
             <div class="dropdown-menu quick-actions animated fadeIn">
               <div class="quick-actions-header">
