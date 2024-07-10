@@ -57,7 +57,7 @@
                             <td>{{ $fas->jenis_faskes_id }}</td>
                             <td>{{ $fas->kategori_id }}</td> --}}
                             <td class="d-flex justify-content-center">
-                              <a href="#" class="btn btn-info btn-sm me-3">Lihat</a>
+                              <a href="{{ route('faskes.info', $fas->id) }}" class="btn btn-info btn-sm me-3">Lihat</a>
                               @if (Auth::user()->role == 'administrator')
                               <a href="{{ route('faskes.edit', $fas->id) }}" class="btn btn-warning btn-sm me-3">Edit</a>
                               <form action="{{ route('faskes.destroy', $fas->id) }}" method="POST">

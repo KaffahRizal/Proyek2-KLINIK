@@ -32,7 +32,7 @@ class Faskes extends Model
         return $this->belongsTo(Kabkota::class);
     }
     //menghubungkan model faskes dengan model jenisfaskes
-    public function jenisfaskes()
+    public function jenis_faskes()
     {
         return $this->belongsTo(JenisFaskes::class);
     }

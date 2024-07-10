@@ -40,6 +40,27 @@ class FaskesController extends Controller
         ]);
     }
 
+    public function info($id)
+    {
+        // ambil data berdasarkan id
+        $kabkota = kabkota::all();
+        //ambil data jenis faskes
+        $jenis_faskes = JenisFaskes::all();
+        //ambil data kategori
+        $kategoris = kategori::all();
+
+        //cari data faskes berdasarkan id
+        $faskes = Faskes::find($id);
+
+        //kirim ke view
+        return view('admin.contents.faskes.info', [
+            'faskes' => $faskes,
+            'kabkotas' => $kabkota, 
+            'jenis_faskes' => $jenis_faskes,
+            'kategori' => $kategoris
+        ]);
+    }
+
     //menyimpan data faskes
     public function store(Request $request)
     {   

@@ -5,7 +5,7 @@
       <div class="sidebar" data-background-color="dark">
         <div class="sidebar-logo">
           <!-- Logo Header -->
-          <div class="logo-header" data-background-color="green2">
+          <div class="logo-header" style="background-color: #55AD9B">
             <a href="/" class="logo">
               <img
                 src="{{asset('kaiadmin')}}/assets/img/kaiadmin/logofsks.png"
@@ -17,7 +17,7 @@
             </a>
             <div class="nav-toggle">
               <button class="btn btn-toggle toggle-sidebar">
-                <i class="gg-menu-right"></i>
+                <i class="gg-menu-right" style="color: #ffff"></i>
               </button>
               <button class="btn btn-toggle sidenav-toggler">
                 <i class="gg-menu-left"></i>
