@@ -60,7 +60,7 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 
     // Route Dashboard
-    Route::get('/admin/dashboard', [DashboardController::class, 'index'])->name('dashboard');
+    Route::get('/admin/dashboard', [DashboardController::class, 'show'])->name('dashboard');
 
     // Route Provinsi
     Route::get('/admin/provinsi', [ProvinsiController::class, 'show'])->name('provinsi')->middleware('admin');
@@ -95,14 +95,10 @@ Route::middleware('auth')->group(function () {
     Route::get('admin/faskes/create', [FaskesController::class, 'create'])->name('faskes.create')->middleware('admin');
     Route::post('/admin/faskes/create', [FaskesController::class, 'store'])->name('faskes.store')->middleware('admin');
     Route::get('admin/faskes/edit/{id}', [FaskesController::class, 'edit'])->name('faskes.edit')->middleware('admin');
-
-    Route::get('admin/faskes/info/{id}', [FaskesController::class, 'info'])->name('faskes.info')->middleware('admin');
-
     Route::put('admin/faskes/update/{id}', [FaskesController::class, 'update'])->name('faskes.update')->middleware('admin');
     Route::delete('admin/faskes/delete/{id}', [FaskesController::class, 'destroy'])->name('faskes.destroy')->middleware('admin');
-
-    //route dashboard
-    Route::get('/admin/dashboard', [DashboardController::class, 'show'])->name('dashboard')->middleware('admin');
+    
+    Route::get('admin/faskes/info/{id}', [FaskesController::class, 'info'])->name('faskes.info');
    
 
 });
