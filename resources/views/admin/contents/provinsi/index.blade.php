@@ -27,6 +27,7 @@
                             <th>No.</th>
                             <th>Nama Provinsi</th>
                             <th>Ibu Kota</th>
+                            <th>Koordinat</th>
                             {{-- <th>Latitude</th>
                             <th>Longtitude</th> --}}
                             <th>Action</th>
@@ -38,6 +39,7 @@
                             <td>{{ $loop->iteration }}</td>
                             <td>{{ $prov->nama }}</td>
                             <td>{{ $prov->ibukota }}</td>
+                            <td>{{ $prov->latitude }}, {{ $prov->longitude }}</td>
                             {{-- <td>{{ $prov->latitude }}</td>
                             <td>{{ $prov->longtitude }}</td> --}}
                             <td class="d-flex justify-content-center">

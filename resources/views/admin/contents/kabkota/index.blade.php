@@ -29,6 +29,7 @@
                             {{-- <th>Latitude</th>
                             <th>Longtitude</th> --}}
                             <th>Provinsi</th>
+                            <th>Koordinat</th>
                             <th>Action</th>
                         </tr>
                     </thead>
@@ -40,6 +41,7 @@
                             {{-- <td>{{ $kk->latitude }}</td>
                             <td>{{ $kk->longtitude }}</td> --}}
                             <td>{{ $kk->provinsi->nama }}</td>
+                            <td>{{ $kk->latitude }}, {{ $kk->longitude }}</td>
                             <td class="d-flex justify-content-center">
                                 <a href="{{ route('kabkota.edit', $kk->id) }}" class="btn btn-warning btn-sm me-3">Edit</a>
                                 <form action="{{ route('kabkota.destroy', $kk->id) }}" method="POST">
