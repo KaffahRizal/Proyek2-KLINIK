@@ -101,7 +101,8 @@ Route::middleware('auth')->group(function () {
     Route::put('admin/faskes/update/{id}', [FaskesController::class, 'update'])->name('faskes.update')->middleware('admin');
     Route::delete('admin/faskes/delete/{id}', [FaskesController::class, 'destroy'])->name('faskes.destroy')->middleware('admin');
 
-    
+    //route dashboard
+    Route::get('/admin/dashboard', [DashboardController::class, 'show'])->name('dashboard')->middleware('admin');
    
 
 });
