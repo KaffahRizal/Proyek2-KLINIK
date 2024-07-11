@@ -203,7 +203,7 @@
                             </div>
                             <div class="form-group row d-flex justify-content-center">
                                 <div class="col-8 d-flex justify-content-center">
-                                    <a href="{{ route('faskes') }}"
+                                    <a href="/"
                                         class="btn btn-danger btn-rounded mr-3">Cancel</a>
                                     <button name="submit" type="submit"
                                         class="btn btn-primary btn-rounded">Submit</button>
