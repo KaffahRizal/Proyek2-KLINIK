@@ -38,6 +38,9 @@
                                 <p><strong>Jenis Faskes:</strong> {{ $faskes->jenis_faskes->nama }}</p>
                                 <p><strong>Kategori:</strong> {{ $faskes->kategori->nama }}</p>
                             </div>
+                            <div class="d-flex justify-content-center">
+                                <a href="/admin/faskes" class="btn btn-primary">Kembali</a>
+                            </div>
                         </div>
                         {{-- <a href="{{ route('faskes.info') }}" class="btn btn-primary mt-3">Kembali</a> --}}
                     </div>
