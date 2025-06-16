@@ -29,7 +29,7 @@ class Faskes extends Model
     //menghubungkan model faskes dengan model kabkota
     public function kabkota()
     {
-        return $this->belongsTo(Kabkota::class);
+        return $this->belongsTo(KabKota::class);
     }
     //menghubungkan model faskes dengan model jenisfaskes
     public function jenis_faskes()
