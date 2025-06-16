@@ -16,7 +16,7 @@ return new class extends Migration
             $table->string('nama', '100');
             $table->string('latitude');
             $table->string('longitude');
-            $table->foreignId('provinsi_id');
+            $table->foreignId('provinsi_id')->constrained('provinsi')->onDelete('cascade'); 
             $table->timestamps();
         });
     }
